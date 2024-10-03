@@ -7,7 +7,7 @@ local ipc = require "luci.ip"
 local a, t, e
 
 a = Map("eqosplus", translate("Network speed limit"))
-a.description = translate("Users can limit the network speed for uploading/downloading through MAC, IP.The speed unit is MB/second.")..translate("Suggested feedback:")..translate("<a href=\'https://github.com/sirpdboy/luci-app-eqosplus.git' target=\'_blank\'>GitHub @sirpdboy/luci-app-eqosplus </a>")
+a.description = translate("Users can limit the network speed for uploading/downloading through MAC, IP.The speed unit is MB/second.")..translate("Not compatible with Software flow offloading.")
 a.template = "eqosplus/index"
 
 t = a:section(TypedSection, "eqosplus")
