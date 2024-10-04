@@ -9,8 +9,8 @@ end
 
 function act_status()
     local sys  = require "luci.sys"
-    local e = {} 
-     e.status = sys.call(" busybox ps -w | grep eqosplus | grep -v grep  >/dev/null ") == 0  
+    local e = {}
+     e.status = sys.call(" busybox ps -w | grep eqosplus | grep -v grep  >/dev/null ") == 0
     luci.http.prepare_content("application/json")
     luci.http.write_json(e)
 end
