@@ -55,4 +55,4 @@ jobs:
           [ -d .git ] && git init
           git add openwrt_core/${{ matrix.target }}
           git commit -sm "${{ env.RELEASE_NAME }}"
-          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages --force
