@@ -62,3 +62,12 @@ jobs:
           file_glob: true
           overwrite: true
           file: bin/packages/${{ matrix.arch }}/packages_ci/*.{ipk,sha256sum}
+
+      - name: Upload Feeds
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: bin/packages/${{ matrix.arch }}/packages_ci/
+          destination_dir: packages/${{ matrix.arch }}/packages_ci/
+          force_orphan: true
+          commit_message: Update Feeds - $(date +%s)
