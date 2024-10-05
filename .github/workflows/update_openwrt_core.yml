@@ -1,4 +1,4 @@
-name: Update openwrt_core
+name: Update OpenWrt Core
 
 on:
   workflow_dispatch:
