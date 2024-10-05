@@ -21,6 +21,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: ls1
+        run: ls
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: gh-pages
+
+      - name: ls2
+        run: ls
+
       - name: Build Packages
         uses: pmkol/openwrt-gh-action-sdk@main
         env:
