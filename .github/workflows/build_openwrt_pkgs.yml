@@ -1,4 +1,4 @@
-name: Build Packages Eqosplus
+name: Build Packages
 
 on:
   workflow_dispatch:
@@ -53,10 +53,11 @@ jobs:
         continue-on-error: true
         run: |
           rm -rf openwrt_pkgs/${{ matrix.arch }}
-          mv /tmp/openwrt_pkgs ./
+          mkdir -p openwrt_pkgs/${{ matrix.arch }}
+          mv /tmp/openwrt_pkgs/${{ matrix.arch }} ./openwrt_pkgs/${{ matrix.arch }}
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
           [ -d .git ] && git init
           git add openwrt_pkgs/${{ matrix.arch }}
           git commit -sm "Update Feeds - ${{env.latest_release}}"
-          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages --force
