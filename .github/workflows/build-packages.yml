@@ -63,12 +63,16 @@ jobs:
           overwrite: true
           file: bin/packages/${{ matrix.arch }}/packages_ci/*.{ipk,sha256sum}
 
-      - name: Upload Feeds
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: bin/packages/${{ matrix.arch }}/packages_ci/
-          destination_dir: openwrt_pkgs/${{ matrix.arch }}/
-          force_orphan: true
-          keep_files: true
-          commit_message: Update Feeds - ${{env.latest_release}}
+      - name: Git push
+        continue-on-error: true
+        run: |
+          cd bin/packages/${{ matrix.arch }}/packages_ci/
+          mkdir -p pkgs/openwrt_pkgs/${{ matrix.arch }}/
+          mv packages_ci pkgs/openwrt_pkgs/${{ matrix.arch }}
+          cd pkgs
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git init
+          git add --all
+          git commit -sm "Update Feeds - ${{env.latest_release}}"
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages
