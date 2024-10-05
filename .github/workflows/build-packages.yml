@@ -21,17 +21,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: ls1
-        run: ls
-
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: gh-pages
-
-      - name: ls2
-        run: ls
-
       - name: Build Packages
         uses: pmkol/openwrt-gh-action-sdk@main
         env:
@@ -49,41 +38,25 @@ jobs:
           done
           echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.tag }}-${{ matrix.arch }}
-          path: bin/packages/${{ matrix.arch }}/packages_ci/*.ipk
+      - name: Upload feeds
+        continue-on-error: true
+        run: |
+          mkdir -p /tmp/openwrt_pkgs/${{ matrix.arch }}/
+          mv bin/packages/${{ matrix.arch }}/packages_ci/* /tmp/openwrt_pkgs/${{ matrix.arch }}
 
-      - name: Delete current release assets
-        uses: andreaswilli/delete-release-assets-action@main
+      - uses: actions/checkout@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ matrix.arch }}
-          deleteOnlyFromDrafts: false
-
-      - name: Create and Upload Release
-        id: upload_release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          release_name: OpenWrt-Packages-${{ matrix.arch }}
-          tag: ${{ matrix.arch }}
-          body: Latest build on ${{env.latest_release}}
-          file_glob: true
-          overwrite: true
-          file: bin/packages/${{ matrix.arch }}/packages_ci/*.{ipk,sha256sum}
+          fetch-depth: 0
+          ref: gh-pages
 
       - name: Git push
         continue-on-error: true
         run: |
-          cd bin/packages/${{ matrix.arch }}/packages_ci/
-          mkdir -p pkgs/openwrt_pkgs/${{ matrix.arch }}/
-          mv packages_ci pkgs/openwrt_pkgs/${{ matrix.arch }}
-          cd pkgs
+          rm -rf openwrt_pkgs/${{ matrix.arch }}
+          mv /tmp/openwrt_pkgs ./
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git init
-          git add --all
+          [ -d .git ] && git init
+          git add openwrt_pkgs/${{ matrix.arch }}
           git commit -sm "Update Feeds - ${{env.latest_release}}"
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages
