@@ -23,7 +23,7 @@ jobs:
 
       - name: Update Packages
         continue-on-error: true
-        run: |
+        run:
           bash update-feeds.sh
 
       - name: Build Packages
