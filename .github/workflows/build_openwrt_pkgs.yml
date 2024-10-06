@@ -21,6 +21,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Update Packages
+        continue-on-error: true
+        run: |
+          bash update-feeds.sh
+
       - name: Build Packages
         uses: pmkol/openwrt-gh-action-sdk@main
         env:
