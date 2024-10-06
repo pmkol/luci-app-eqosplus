@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 arch=$1
-echo "matrix.arch = $arch"
-[[ "$arch" != "x86" && "$arch" != "aarch64_generic" ]] && echo "Unsupported architecture: $arch. Exiting..." && exit 1
+echo "matrix.arch=$arch"
+[[ "$arch" != "x86_64" && "$arch" != "aarch64_generic" ]] && echo "Unsupported architecture: $arch. Exiting..." && exit 1
 
 curl -s https://downloads.openwrt.org/releases/packages-23.05/$arch/packages/Packages | grep '^Package:' | awk '{print $2}' | sort > openwrt-packages
 curl -s https://downloads.immortalwrt.org/releases/packages-23.05/$arch/packages/Packages | grep '^Package:' | awk '{print $2}' | sort > immortalwrt-packages
