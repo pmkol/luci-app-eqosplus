@@ -17,7 +17,7 @@ git clone https://github.com/immortalwrt/luci immortalwrt/luci --depth 1
 while read -r pkg_name; do
   find immortalwrt -mindepth 3 -maxdepth 3 -type d -name "$pkg_name" | while read -r pkg_dir; do
     remove_dir=$(realpath "$pkg_dir")
-    echo "remove $remove_dir"
+    echo "remove $pkg_dir"
     rm -rf "$remove_dir"
   done
 done < remove-packages
