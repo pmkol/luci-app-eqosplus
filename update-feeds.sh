@@ -10,7 +10,7 @@ grep -Fxf openwrt-packages immortalwrt-packages > remove-packages
 curl -s https://downloads.openwrt.org/releases/packages-23.05/$arch/luci/Packages | grep '^Package:' | awk '{print $2}' | sort > openwrt-packages
 curl -s https://downloads.immortalwrt.org/releases/packages-23.05/$arch/luci/Packages | grep '^Package:' | awk '{print $2}' | sort > immortalwrt-packages
 grep -Fxf openwrt-packages immortalwrt-packages >> remove-packages
-cat remove-packages
+
 git clone https://github.com/immortalwrt/packages immortalwrt/packages --depth 1
 git clone https://github.com/immortalwrt/luci immortalwrt/luci --depth 1
 
