@@ -22,7 +22,6 @@ jobs:
           fetch-depth: 0
 
       - name: Update Packages
-        continue-on-error: true
         run:
           bash update-feeds.sh ${{ matrix.arch }}
 
@@ -44,7 +43,6 @@ jobs:
           echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
       - name: Upload packages_ci
-        continue-on-error: true
         run: |
           mkdir -p /tmp/openwrt_pkgs/${{ matrix.arch }}/
           mv bin/packages/${{ matrix.arch }}/packages_ci/* /tmp/openwrt_pkgs/${{ matrix.arch }}
