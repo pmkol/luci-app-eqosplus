@@ -24,7 +24,7 @@ jobs:
       - name: Update Packages
         continue-on-error: true
         run:
-          bash update-feeds.sh
+          bash update-feeds.sh ${{ matrix.arch }}
 
       - name: Build Packages
         uses: pmkol/openwrt-gh-action-sdk@main
