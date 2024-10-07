@@ -24,6 +24,7 @@ git clone https://github.com/sbwml/packages_utils_dockerd --depth 1
 git clone https://github.com/sbwml/packages_utils_runc --depth 1
 #git clone https://github.com/pmkol/openwrt-eqosplus --depth 1
 git clone https://github.com/pmkol/openwrt-mihomo --depth 1
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x --depth 1
 
 rm -rf immortalwrt/luci-app-homeproxy/{LICENSE,README}
 rm -rf openwrt-ddns-go/luci-app-ddns-go/README.md
