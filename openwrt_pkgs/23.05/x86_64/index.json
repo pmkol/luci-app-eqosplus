@@ -1,1 +1,1 @@
-{"architecture": "x86_64", "packages":{"luci-app-frpc": "unknown", "luci-i18n-frpc-zh-cn": "unknown", "luci-i18n-frpc-zh-tw": "unknown"}}
+{"architecture": "x86_64", "packages":{"luci-app-frpc": "1.1", "luci-i18n-frpc-zh-cn": "unknown", "luci-i18n-frpc-zh-tw": "unknown"}}
