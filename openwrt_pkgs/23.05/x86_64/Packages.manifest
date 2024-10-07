@@ -1,5 +1,5 @@
 Package: luci-app-frpc
-Version: 1.1
+Version: 20240919
 Depends: libc, frpc
 Source: /feed/luci-app-frpc
 SourceName: luci-app-frpc
@@ -9,13 +9,13 @@ SourceDateEpoch: 1727541201
 Maintainer: OpenWrt LuCI community
 Architecture: all
 Installed-Size: 4349
-Filename: luci-app-frpc_1.1_all.ipk
-Size: 5137
-SHA256sum: b54a13c95dfb1239d155fb781c8892a653a2587476d2e5d7b42e1c5db0cbe2e7
+Filename: luci-app-frpc_20240919_all.ipk
+Size: 5145
+SHA256sum: 005524db220787d96df70b0b6420873b6b97deac1c13dac5c99d87c6ea1c99af
 Description:  LuCI Support for frp client
 
 Package: luci-i18n-frpc-zh-cn
-Version: unknown
+Version: 20240919
 Depends: libc, luci-app-frpc
 Source: /feed/luci-app-frpc
 SourceName: luci-i18n-frpc-zh-cn
@@ -25,13 +25,13 @@ SourceDateEpoch: 1727541201
 Maintainer: Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 3313
-Filename: luci-i18n-frpc-zh-cn_unknown_all.ipk
-Size: 4084
-SHA256sum: fb4d2d33b0d7eb403a53d0d56f2bd0124d707bc4a86c97a0320d505a3237f9f8
+Filename: luci-i18n-frpc-zh-cn_20240919_all.ipk
+Size: 4077
+SHA256sum: 8c2ac15485ce21749c672109fe71c0cc38d8705f452d504920983c53c8c14c26
 Description:  Translation for luci-app-frpc - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-frpc-zh-tw
-Version: unknown
+Version: 20240919
 Depends: libc, luci-app-frpc
 Source: /feed/luci-app-frpc
 SourceName: luci-i18n-frpc-zh-tw
@@ -41,8 +41,8 @@ SourceDateEpoch: 1727541201
 Maintainer: Richard Yu <yurichard3839@gmail.com>
 Architecture: all
 Installed-Size: 3424
-Filename: luci-i18n-frpc-zh-tw_unknown_all.ipk
-Size: 4192
-SHA256sum: 76eb519d20b1f6a53433d83035b0d12f037ac828717c32aef3d470eedca69f1d
+Filename: luci-i18n-frpc-zh-tw_20240919_all.ipk
+Size: 4190
+SHA256sum: 1e0de70136fe401b815f7c3f756bb5a026240d09d6bd7e634dbb3e03c1d63bdf
 Description:  Translation for luci-app-frpc - 繁體中文 (Chinese Traditional)
 
