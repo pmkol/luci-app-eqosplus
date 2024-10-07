@@ -31,7 +31,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.tag }}
           FEEDNAME: packages_ci
-          PACKAGES: packages_utils_docker
+          PACKAGES: luci-app-frpc
           INDEX: 1
           KEY_BUILD: ${{ secrets.OPENWRT_PRIVATE_KEY }}
           NO_REFRESH_CHECK: true
@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: package-dump-log
-          path: logs/feeds/packages_ci/packages_utils_docker/dump.txt
+          path: logs/feeds/packages_ci/luci-app-frpc/dump.txt
 
       - name: Upload packages_ci
         run: |
