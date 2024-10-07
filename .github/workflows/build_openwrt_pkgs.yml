@@ -1,4 +1,4 @@
-name: Build Packages
+name: Build OpenWrt 23.05 Packages
 
 on:
   workflow_dispatch:
@@ -30,6 +30,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.tag }}
           FEEDNAME: packages_lite
+          PACKAGES: luci-app-frpc
           INDEX: 1
           KEY_BUILD: ${{ secrets.OPENWRT_PRIVATE_KEY }}
           NO_REFRESH_CHECK: true
