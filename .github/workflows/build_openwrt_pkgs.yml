@@ -22,7 +22,8 @@ jobs:
           fetch-depth: 0
 
       - name: Update Packages
-        run:
+        run: |
+          echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
           bash update-feeds.sh ${{ matrix.arch }}
 
       - name: Build Packages
@@ -35,12 +36,11 @@ jobs:
           NO_REFRESH_CHECK: true
           IGNORE_ERRORS: true
 
-      - name: Extract Packages SHA256
-        run: |
-          for pkg in bin/packages/${{ matrix.arch }}/packages_ci/*.ipk; do
-            sha256sum "$pkg" | awk -v filename="$(basename "$pkg")" '{ print $1, filename }' >> bin/packages/${{ matrix.arch }}/packages_ci/Packages.sha256sum
-          done
-          echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
+      - name: Upload logs
+        uses: actions/upload-artifact@main
+        with:
+          name: package-dump-log
+          path: logs/feeds/packages_ci/packages_utils_docker/dump.txt
 
       - name: Upload packages_ci
         run: |
