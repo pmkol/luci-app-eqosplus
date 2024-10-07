@@ -41,6 +41,7 @@ curl https://raw.githubusercontent.com/pmkol/openwrt-plus/refs/heads/master/open
 curl https://raw.githubusercontent.com/pmkol/openwrt-plus/refs/heads/master/openwrt/patch/docker/0002-docker-add-buildkit-experimental-support.patch patch_docker_2.patch
 curl https://github.com/pmkol/openwrt-plus/raw/refs/heads/master/openwrt/patch/docker/0003-dockerd-disable-ip6tables-for-bridge-network-by-defa.patch > patch_docker_3.patch
 
+
 # luci-app-alist
 mv openwrt-alist/*/ ./
 rm -rf openwrt-alist
@@ -54,13 +55,13 @@ mv openwrt-ddns-go/*/ ./
 rm -rf openwrt-ddns-go
 
 # luci-app-eqos
-patch -p1 -f -s -d immortalwrt/luci/applications < patch-luci-app-eqos.patch
-if [ $? -eq 0 ]; then
-    rm -rf luci-app-eqos
-    mv immortalwrt/luci/applications/luci-app-eqos luci-app-eqos
-else
-    mv /tmp/bak/luci-app-eqos luci-app-eqos
-fi
+#patch -p1 -f -s -d immortalwrt/luci/applications < patch-luci-app-eqos.patch
+#if [ $? -eq 0 ]; then
+#    rm -rf luci-app-eqos
+#    mv immortalwrt/luci/applications/luci-app-eqos luci-app-eqos
+#else
+#    mv /tmp/bak/luci-app-eqos luci-app-eqos
+#fi
 
 # luci-app-eqosplus
 #mv openwrt-eqosplus/*/ ./
@@ -104,3 +105,6 @@ mv immortalwrt/luci/applications/luci-app-zerotier luci-app-zerotier
 
 # haproxy
 mv openwrt/packages/net/haproxy ./
+
+
+rm -rf openwrt immortalwrt
