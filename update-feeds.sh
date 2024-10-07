@@ -19,12 +19,11 @@ git clone https://github.com/sbwml/luci-app-mentohust openwrt-mentohust --depth 
 git clone https://github.com/sbwml/luci-app-mosdns openwrt-mosdns --depth 1
 git clone https://github.com/sbwml/luci-app-qbittorrent openwrt-qbittorrent --depth 1
 git clone https://github.com/sbwml/packages_utils_containerd --depth 1
-git clone https://github.com/sbwml/packages_utils_docker --depth 1
+#git clone https://github.com/sbwml/packages_utils_docker --depth 1
 git clone https://github.com/sbwml/packages_utils_dockerd --depth 1
 git clone https://github.com/sbwml/packages_utils_runc --depth 1
 #git clone https://github.com/pmkol/openwrt-eqosplus --depth 1
 git clone https://github.com/pmkol/openwrt-mihomo --depth 1
-git clone https://github.com/sbwml/packages_lang_golang -b 22.x --depth 1
 
 rm -rf immortalwrt/luci-app-homeproxy/{LICENSE,README}
 rm -rf openwrt-ddns-go/luci-app-ddns-go/README.md
@@ -42,6 +41,7 @@ curl https://raw.githubusercontent.com/pmkol/openwrt-plus/refs/heads/master/open
 curl https://raw.githubusercontent.com/pmkol/openwrt-plus/refs/heads/master/openwrt/patch/docker/0002-docker-add-buildkit-experimental-support.patch patch_docker_2.patch
 curl https://github.com/pmkol/openwrt-plus/raw/refs/heads/master/openwrt/patch/docker/0003-dockerd-disable-ip6tables-for-bridge-network-by-defa.patch > patch_docker_3.patch
 
+mv immortalwrt/packages/utils/docker ./
 
 # luci-app-alist
 mv openwrt-alist/*/ ./
