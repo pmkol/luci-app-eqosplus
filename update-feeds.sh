@@ -36,7 +36,7 @@ rm -rf openwrt_pkgs/rtl_fm_streamer
 rm -rf openwrt_helloworld/
 
 # download patch
-mv -f openwrt-passwall/*.patch ./
+mv -f openwrt_helloworld/*.patch ./
 curl https://raw.githubusercontent.com/pmkol/openwrt-plus/refs/heads/master/openwrt/patch/docker/0001-dockerd-fix-bridge-network.patch > patch_docker_1.patch
 curl https://raw.githubusercontent.com/pmkol/openwrt-plus/refs/heads/master/openwrt/patch/docker/0002-docker-add-buildkit-experimental-support.patch patch_docker_2.patch
 curl https://github.com/pmkol/openwrt-plus/raw/refs/heads/master/openwrt/patch/docker/0003-dockerd-disable-ip6tables-for-bridge-network-by-defa.patch > patch_docker_3.patch
