@@ -27,7 +27,7 @@ jobs:
           bash update-feeds.sh ${{ matrix.arch }}
 
       - name: Build Packages
-        uses: openwrt/openwrt-gh-action-sdk@main
+        uses: openwrt/gh-action-sdk@main
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.tag }}
           FEEDNAME: packages_ci
