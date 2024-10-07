@@ -21,11 +21,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Update Packages
-        run: |
-          echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
-          bash update-feeds.sh ${{ matrix.arch }}
-
       - name: Build Packages
         uses: pmkol/openwrt-gh-action-sdk@main
         env:
