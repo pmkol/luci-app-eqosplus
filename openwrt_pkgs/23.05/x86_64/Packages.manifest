@@ -1,1 +1,36 @@
+Package: frpc
+Version: 0.51.3-1
+Depends: libc
+Source: feeds/packages/net/frp
+SourceName: frpc
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1728317160
+Maintainer: Richard Yu <yurichard3839@gmail.com>
+Architecture: x86_64
+Installed-Size: 5661152
+Filename: frpc_0.51.3-1_x86_64.ipk
+Size: 5643434
+SHA256sum: 8e9cc1b814d6eec9b53026729c80929844e62ac25ac5b4980ed9578f5863159e
+Description:  frpc is a fast reverse proxy client to help you expose a local server behind
+ a NAT or firewall to the internet.
+
+Package: frps
+Version: 0.51.3-1
+Depends: libc
+Source: feeds/packages/net/frp
+SourceName: frps
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1728317160
+Maintainer: Richard Yu <yurichard3839@gmail.com>
+Architecture: x86_64
+Installed-Size: 6549748
+Filename: frps_0.51.3-1_x86_64.ipk
+Size: 6529082
+SHA256sum: ca4e60fa505ca8f72e40eefa3f166dac367df1b79ca35f011b3bfdd8018bf13c
+Description:  frps is a fast reverse proxy server to help you expose a local server behind
+ a NAT or firewall to the internet.
 
