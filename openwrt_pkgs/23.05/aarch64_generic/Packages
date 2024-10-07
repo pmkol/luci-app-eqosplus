@@ -1,36 +1,36 @@
 Package: luci-app-frpc
-Version: 1.1
+Version: 20240919
 Depends: libc, frpc
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 4350
-Filename: luci-app-frpc_1.1_all.ipk
-Size: 5132
-SHA256sum: 52b35340a971272793ad70b569264543a5292fda4b3f3ddcdf36a1c213dc355b
+Filename: luci-app-frpc_20240919_all.ipk
+Size: 5144
+SHA256sum: faa3d868042662979554c38b91aebfdd4c13c1940c53faac44d319bae972f920
 Description:  LuCI Support for frp client
 
 Package: luci-i18n-frpc-zh-cn
-Version: unknown
+Version: 20240919
 Depends: libc, luci-app-frpc
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 3310
-Filename: luci-i18n-frpc-zh-cn_unknown_all.ipk
+Filename: luci-i18n-frpc-zh-cn_20240919_all.ipk
 Size: 4073
-SHA256sum: 3689a29c6839658c1b361dc31b064821adf2424f78c79d82c12c3c78196baf13
+SHA256sum: eb6cc6c47eb0328d63ae9e5fae05d667094b80015544cec24311f8ae7d2c6f0c
 Description:  Translation for luci-app-frpc - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-frpc-zh-tw
-Version: unknown
+Version: 20240919
 Depends: libc, luci-app-frpc
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 3421
-Filename: luci-i18n-frpc-zh-tw_unknown_all.ipk
-Size: 4186
-SHA256sum: 8de30b5311c8b86e491c08e3e3d79cd2dd2dbdf0bb22277599e0e811fb0590e0
+Filename: luci-i18n-frpc-zh-tw_20240919_all.ipk
+Size: 4187
+SHA256sum: 192c9f328198b0d1a18c09e481272e7122be9406879e2b2c414973b05b009649
 Description:  Translation for luci-app-frpc - 繁體中文 (Chinese Traditional)
 
