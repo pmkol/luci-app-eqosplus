@@ -1,4 +1,4 @@
-name: Build OpenWrt 23.05 Packages
+name: Build Packages
 
 on:
   workflow_dispatch:
@@ -21,20 +21,24 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Update Packages
+        run:
+          bash update-feeds.sh ${{ matrix.arch }}
+
       - name: Build Packages
-        uses: pmkol/openwrt-gh-action-sdk@pkgs
+        uses: pmkol/openwrt-gh-action-sdk@main
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.tag }}
-          PACKAGES: luci-app-frpc
+          FEEDNAME: packages_lite
           INDEX: 1
           KEY_BUILD: ${{ secrets.OPENWRT_PRIVATE_KEY }}
           NO_REFRESH_CHECK: true
           IGNORE_ERRORS: true
 
-      - name: Upload packages_ci
+      - name: Upload packages_lite
         run: |
           mkdir -p /tmp/openwrt_pkgs/${{ matrix.arch }}/
-          mv bin/packages/${{ matrix.arch }}/packages/* /tmp/openwrt_pkgs/${{ matrix.arch }}
+          mv bin/packages/${{ matrix.arch }}/packages_lite/* /tmp/openwrt_pkgs/${{ matrix.arch }}
 
       - uses: actions/checkout@v4
         with:
@@ -51,5 +55,5 @@ jobs:
           git config --global user.email 'actions@github.com'
           [ -d .git ] && git init
           git add openwrt_pkgs/23.05/${{ matrix.arch }}
-          git commit -sm "Update ${{ matrix.arch }} packages_ci - ${{env.latest_release}}"
+          git commit -sm "Update ${{ matrix.arch }} packages_lite - $DATE"
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages --force
