@@ -72,7 +72,7 @@ rm -rf openwrt-ddns-go
 mv openwrt/luci/applications/luci-app-frpc ./
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-frpc/Makefile
 luci_frpc_commit_date=$(curl -s "https://api.github.com/repos/immortalwrt/luci/commits?path=applications/luci-app-frpc&sha=openwrt-23.05" | jq -r '.[0].commit.committer.date' | cut -d'T' -f1 | tr -d '-')
-sed -i "/PKG_MAINTAINER/i\PKG_VERSION:=$luci_frpc_commit_date" luci-app-frpc/Makefile
+sed -i "/PKG_MAINTAINER/i\PKG_VERSION:=1.1" luci-app-frpc/Makefile
 rm -rf luci-app-frpc/po/!(templates|zh_Hans|zh_Hant)
 
 
