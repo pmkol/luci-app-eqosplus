@@ -69,9 +69,7 @@ rm -rf openwrt-ddns-go
 
 # luci-app-frpc
 mv openwrt/luci/applications/luci-app-frpc ./
-cd luci-app-frpc
-ls
-cd ../
+sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-frpc/Makefile
 
 # luci-app-mentohust
 mv openwrt-mentohust/*/ ./
