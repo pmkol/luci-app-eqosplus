@@ -1,13 +1,13 @@
 Package: luci-app-frpc
-Version: 20240919
+Version: 1.1
 Depends: libc, frpc
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 4350
-Filename: luci-app-frpc_20240919_all.ipk
-Size: 5144
-SHA256sum: faa3d868042662979554c38b91aebfdd4c13c1940c53faac44d319bae972f920
+Filename: luci-app-frpc_1.1_all.ipk
+Size: 5132
+SHA256sum: 52b35340a971272793ad70b569264543a5292fda4b3f3ddcdf36a1c213dc355b
 Description:  LuCI Support for frp client
 
 Package: luci-i18n-frpc-zh-cn
