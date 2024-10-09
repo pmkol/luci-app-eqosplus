@@ -20,10 +20,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: pkgs
 
       - name: Update Packages
         run:
           bash update-feeds.sh ${{ matrix.arch }}
+          echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          [ -d .git ] && git init
+          git add .
+          git commit -sm "Sync - ${{env.latest_release}}"
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages --force
 
       - name: Build Packages
         uses: pmkol/openwrt-gh-action-sdk@main
@@ -40,7 +48,6 @@ jobs:
         run: |
           mkdir -p /tmp/openwrt_pkgs/${{ matrix.arch }}/
           mv bin/packages/${{ matrix.arch }}/packages_lite/* /tmp/openwrt_pkgs/${{ matrix.arch }}
-          echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
       - uses: actions/checkout@v4
         with:
