@@ -28,7 +28,6 @@ git clone https://github.com/sbwml/packages_utils_runc --depth 1
 git clone https://github.com/sbwml/OpenAppFilter openwrt-oaf --depth 1
 git clone https://github.com/sbwml/feeds_packages_libs_liburing --depth 1
 git clone https://github.com/sbwml/feeds_packages_net_samba4 --depth 1
-git clone https://github.com/pmkol/openwrt-eqosplus --depth 1
 git clone https://github.com/pmkol/openwrt-mihomo --depth 1
 git clone https://github.com/pmkol/v2ray-geodata -b lite --depth 1
 
