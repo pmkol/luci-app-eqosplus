@@ -33,7 +33,7 @@ jobs:
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
           [ -d .git ] && git init
-          git add openwrt_pkgs/23.05/${{ matrix.arch }}
+          git add .
           git commit -sm "Sync - ${{env.latest_release}}"
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pkgs
 
@@ -42,7 +42,6 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.tag }}
           FEEDNAME: packages_lite
-          PACKAGES: luci-app-frpc
           INDEX: 1
           KEY_BUILD: ${{ secrets.OPENWRT_PRIVATE_KEY }}
           NO_REFRESH_CHECK: true
