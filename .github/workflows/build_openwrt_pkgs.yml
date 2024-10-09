@@ -30,7 +30,7 @@ jobs:
           git config --global user.email 'actions@github.com'
           [ -d .git ] && git init
           git add .
-          git commit -sm "Sync - ${{env.latest_release}}"
+          git commit -m "Sync - ${{env.latest_release}}"
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pkgs
 
       - name: Build Packages
