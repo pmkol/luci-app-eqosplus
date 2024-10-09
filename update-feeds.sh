@@ -59,10 +59,6 @@ mv openwrt_helloworld/*/ ./
 mv openwrt-alist/*/ ./
 rm -rf openwrt-alist
 
-# add luci-app-airconnect/*/ ./
-mv openwrt-airconnect
-rm -rf openwrt-airconnect
-
 # add luci-app-ddns-go
 mv openwrt-ddns-go/*/ ./
 rm -rf openwrt-ddns-go
