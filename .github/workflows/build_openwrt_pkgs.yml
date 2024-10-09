@@ -31,7 +31,7 @@ jobs:
           [ -d .git ] && git init
           git add .
           git commit -sm "Sync - ${{env.latest_release}}"
-          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages --force
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pkgs
 
       - name: Build Packages
         uses: pmkol/openwrt-gh-action-sdk@main
