@@ -4,8 +4,33 @@ on:
   workflow_dispatch:
 
 jobs:
+  sync:
+    name: Sync Upstream
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: pkgs
+
+      - name: Update Feeds
+        run: |
+          bash update-feeds.sh
+          echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
+
+      - name: Git Push
+        continue-on-error: true
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          [ -d .git ] && git init
+          git add .
+          git commit -sm "Sync - ${{env.latest_release}}"
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pkgs
+
   build:
     name: Build ${{ matrix.arch }}-${{ matrix.tag }}
+    needs: sync
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -21,21 +46,6 @@ jobs:
         with:
           fetch-depth: 0
           ref: pkgs
-
-      - name: Update Packages
-        run: |
-          bash update-feeds.sh ${{ matrix.arch }}
-          echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
-
-      - name: Git push
-        continue-on-error: true
-        run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          [ -d .git ] && git init
-          git add .
-          git commit -sm "Sync - ${{env.latest_release}}"
-          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pkgs
 
       - name: Build Packages
         uses: pmkol/openwrt-gh-action-sdk@main
@@ -69,3 +79,15 @@ jobs:
           git add openwrt_pkgs/23.05/${{ matrix.arch }}
           git commit -sm "Update ${{ matrix.arch }} packages_lite - ${{env.latest_release}}"
           git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:gh-pages --force
+
+  deploy:
+    name: Pages Build and Deployment
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pages Deployment
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/pages/builds
