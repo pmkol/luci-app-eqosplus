@@ -437,10 +437,10 @@ Version: 1.31-1
 Depends: libc, coreutils, coreutils-base64, coreutils-nohup, curl, ip-full, libuci-lua, lua, luci-compat, luci-lib-jsonc, resolveip, tcping, xray-core, v2ray-geoip, v2ray-geosite, unzip, luci-lua-runtime
 Section: luci
 Architecture: all
-Installed-Size: 232069
+Installed-Size: 232585
 Filename: luci-app-passwall2_1.31-1_all.ipk
-Size: 233128
-SHA256sum: 48fabc634382c438166625847e2d27357cde6ad4c265425df2e743494c2caa50
+Size: 233622
+SHA256sum: 94257f5459572449e742f5c1833584607a694bf21b8bdfce08d19aeace6e02fc
 Description:  LuCI support for PassWall 2
 
 Package: luci-app-passwall
@@ -721,14 +721,14 @@ SHA256sum: aa62ac0642c3aaa4e848c9114a5d397f77b88d4be065cf440dd3eddef13284de
 Description:  Translation for luci-app-passwall - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-passwall2-zh-cn
-Version: git-24.283.78010-d89d4d3
+Version: git-24.284.69170-58b3fad
 Depends: libc, luci-app-passwall2
 Section: luci
 Architecture: all
-Installed-Size: 12392
-Filename: luci-i18n-passwall2-zh-cn_git-24.283.78010-d89d4d3_all.ipk
-Size: 13118
-SHA256sum: 90fb3e4025cfd93c73146f64d6d3a681221bbe34232d36419d548ffe1ca74ae7
+Installed-Size: 12529
+Filename: luci-i18n-passwall2-zh-cn_git-24.284.69170-58b3fad_all.ipk
+Size: 13258
+SHA256sum: d635d1d4a7992ea1f5eaff0c3d9a8df2165d7455323b7e238804d35f76be28ca
 Description:  Translation for luci-app-passwall2 - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-qbittorrent-zh-cn
@@ -834,15 +834,15 @@ Description:  A SOCKS5 service that you can run on your remote boxes to tunnel c
  through them, if for some reason SSH doesn't cut it for you.
 
 Package: mihomo
-Version: 2024-10-07-9fd63fe9-1
+Version: 2024-10-08-08dcef80-1
 Depends: libc, ca-bundle, curl, yq, firewall4, kmod-nft-tproxy, ip-full, kmod-tun, procd-ujail
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 10101969
-Filename: mihomo_2024-10-07-9fd63fe9-1_aarch64_generic.ipk
-Size: 10070097
-SHA256sum: 8fce61c2ad45afd0f3ae400fbeb6572324502954c8fec382678748e55a19f1eb
+Installed-Size: 10101828
+Filename: mihomo_2024-10-08-08dcef80-1_aarch64_generic.ipk
+Size: 10070028
+SHA256sum: 976b90a399dd3e8b2e88da451fd18a9767dc9d308757a8815dc2d15732d54a95
 Description:  A rule based proxy in Go.
 
 Package: mosdns
@@ -1397,10 +1397,10 @@ Depends: libc, libpthread
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 24583
+Installed-Size: 24581
 Filename: vlmcsd_svn1113-4_aarch64_generic.ipk
-Size: 25270
-SHA256sum: fb902fc8982637e00a55bbd7822e177d80c621c6ed7351e95ce0f5ee3b4e3226
+Size: 25258
+SHA256sum: 32738b67d562dc636cce36cd4629ec7c9b5821463f3dc8c5943c97ee38d11906
 Description:  vlmcsd is a KMS Emulator in C.
 
 Package: xray-core
