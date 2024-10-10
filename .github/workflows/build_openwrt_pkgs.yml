@@ -61,6 +61,7 @@ jobs:
         run: |
           mkdir -p /tmp/openwrt_pkgs/${{ matrix.arch }}/
           mv bin/packages/${{ matrix.arch }}/packages_lite/* /tmp/openwrt_pkgs/${{ matrix.arch }}
+          echo "latest_release=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
       - uses: actions/checkout@v4
         with:
@@ -85,8 +86,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: gh-pages
       - name: Pages Deployment
-        run: |
+        run:
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
