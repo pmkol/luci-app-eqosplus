@@ -18,6 +18,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: packages
+        publish_dir: openwrt_pkgs
         force_orphan: true
         commit_message: Update Feed
