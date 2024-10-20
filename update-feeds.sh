@@ -54,8 +54,8 @@ rm -rf luci-app-qosmate/.git
 rm -rf v2ray-geodata/.git
 rm -rf packages_net_miniupnpd/.git
 rm -rf luci-app-upnp/.git
-mv openwrt-feeds/*/ ./
-rm -rf openwrt-feeds
+#mv openwrt-feeds/*/ ./
+#rm -rf openwrt-feeds
 
 # download patch
 mv -f openwrt_helloworld/*.patch ./
