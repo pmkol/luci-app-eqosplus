@@ -21,10 +21,10 @@ git clone https://github.com/sbwml/luci-app-mentohust openwrt-mentohust --depth 
 git clone https://github.com/sbwml/luci-app-mosdns openwrt-mosdns --depth 1
 git clone https://github.com/sbwml/luci-app-qbittorrent openwrt-qbittorrent --depth 1
 git clone https://github.com/sbwml/luci-theme-argon openwrt-argon --depth 1
-git clone https://github.com/sbwml/packages_utils_containerd --depth 1
-git clone https://github.com/sbwml/packages_utils_docker --depth 1
-git clone https://github.com/sbwml/packages_utils_dockerd --depth 1
-git clone https://github.com/sbwml/packages_utils_runc --depth 1
+git clone https://github.com/sbwml/packages_utils_containerd openwrt-feeds/packages_utils_containerd --depth 1
+git clone https://github.com/sbwml/packages_utils_docker openwrt-feeds/packages_utils_docker --depth 1
+git clone https://github.com/sbwml/packages_utils_dockerd openwrt-feeds/packages_utils_dockerd --depth 1
+git clone https://github.com/sbwml/packages_utils_runc openwrt-feeds/packages_utils_runc --depth 1
 git clone https://github.com/sbwml/OpenAppFilter openwrt-oaf --depth 1
 git clone https://github.com/sbwml/feeds_packages_libs_liburing --depth 1
 git clone https://github.com/sbwml/feeds_packages_net_samba4 --depth 1
@@ -44,16 +44,18 @@ rm -rf openwrt_helloworld/{luci-app-homeproxy,luci-app-mihomo,mihomo,v2ray-geoda
 #rm -rf openwrt-alist/alist
 rm -rf feeds_packages_libs_liburing/.git
 rm -rf feeds_packages_net_samba4/.git
-rm -rf packages_utils_containerd/.git
-rm -rf packages_utils_docker/.git
-rm -rf packages_utils_dockerd/.git
-rm -rf packages_utils_runc/.git
+rm -rf openwrt-feeds/packages_utils_containerd/.git
+rm -rf openwrt-feeds/packages_utils_docker/.git
+rm -rf openwrt-feeds/packages_utils_dockerd/.git
+rm -rf openwrt-feeds/packages_utils_runc/.git
 rm -rf luci-app-unblockneteasemusic/.git
 rm -rf qosmate/.git
 rm -rf luci-app-qosmate/.git
 rm -rf v2ray-geodata/.git
 rm -rf packages_net_miniupnpd/.git
 rm -rf luci-app-upnp/.git
+mv openwrt-feeds/*/ ./
+rm -rf openwrt-feeds
 
 # download patch
 mv -f openwrt_helloworld/*.patch ./
@@ -176,5 +178,6 @@ sed -i 's/services/network/g' feeds/luci/applications/luci-app-nlbwmon/htdocs/lu
 
 # haproxy
 mv openwrt/packages/net/haproxy ./
+
 
 rm -rf openwrt immortalwrt
