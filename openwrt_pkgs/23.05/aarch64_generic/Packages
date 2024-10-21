@@ -22,6 +22,19 @@ Size: 263677
 SHA256sum: 0404e1bd52141675b2bb2814157ceb50131f00e6097fbe9ce1866d5a06895ede
 Description:  ChinaDNS next generation, refactoring with epoll and ipset.
 
+Package: containerd
+Version: 1.7.22-1
+Depends: libc, btrfs-progs, runc
+License: Apache-2.0
+Section: utils
+CPE-ID: cpe:/a:linuxfoundation:containerd
+Architecture: aarch64_generic
+Installed-Size: 36241483
+Filename: containerd_1.7.22-1_aarch64_generic.ipk
+Size: 35958481
+SHA256sum: 7c5c91a0c1c48e324e96e3a7ff39e9774af9f7bd457cd3f0a602647c4b7cb883
+Description:  An industry-standard container runtime with an emphasis on simplicity, robustness and portability
+
 Package: coremark
 Version: 2023-01-25-d5fad6bd-1
 Depends: libc
@@ -39,10 +52,10 @@ Depends: libc, ca-bundle
 License: AGPL-3.0-only
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 3865802
+Installed-Size: 3865904
 Filename: ddns-go_6.7.0-1_aarch64_generic.ipk
-Size: 3856118
-SHA256sum: 9ac8fae6d747284bf01b8f9a7e4be7bedb477934e2d26de0501c4d3beea3cf01
+Size: 3856323
+SHA256sum: 90e284d4f48fb3c6a5a09c95edbfee2d69904ff353b01f471b854e532f825c1e
 Description:  ddns-go is a automatically obtain your public IPv4 or IPv6 address and resolve it to the corresponding domain name service,
  support Alidns Dnspod Cloudflare Hicloud Callback Baiducloud porkbun GoDaddy Google Domains.
 
@@ -94,15 +107,41 @@ Size: 7711450
 SHA256sum: 333c9c61a491624f063e9502f8f70bfb1facc845bd5de81122ade6c389816184
 Description:  File Browser is a create-your-own-cloud-kind of software where you can install it on a server
 
+Package: frpc
+Version: 0.51.3-1
+Depends: libc
+License: Apache-2.0
+Section: net
+Architecture: aarch64_generic
+Installed-Size: 5165435
+Filename: frpc_0.51.3-1_aarch64_generic.ipk
+Size: 5146193
+SHA256sum: fb9f9fadf5271bdd7c52b7f74b1cb2c8c4e5e41d56401aa40cf409b74f99684c
+Description:  frpc is a fast reverse proxy client to help you expose a local server behind
+ a NAT or firewall to the internet.
+
+Package: frps
+Version: 0.51.3-1
+Depends: libc
+License: Apache-2.0
+Section: net
+Architecture: aarch64_generic
+Installed-Size: 5998081
+Filename: frps_0.51.3-1_aarch64_generic.ipk
+Size: 5976620
+SHA256sum: bc8e11d0b75dd27e06d56485b1dc33e23b73156536d6faf39569087bc2a002e2
+Description:  frps is a fast reverse proxy server to help you expose a local server behind
+ a NAT or firewall to the internet.
+
 Package: gowebdav
 Version: 0.0.8-1
 Depends: libc
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 2288627
+Installed-Size: 2288626
 Filename: gowebdav_0.0.8-1_aarch64_generic.ipk
-Size: 2284108
-SHA256sum: ced57d202d717fab28d1a2f23e37cfe25ba96fe3ccf02371ad4f3ad4f55cb8a3
+Size: 2284089
+SHA256sum: b2ed88536b3052dae1fd7348cdfc94fdbee4e143188b07c17e7c301a5c8cfe26
 Description:  A simple WebDav server written in Go
 
 Package: halog
@@ -126,10 +165,10 @@ License: GPL-2.0-only
 Section: net
 CPE-ID: cpe:/a:haproxy:haproxy
 Architecture: aarch64_generic
-Installed-Size: 1015558
+Installed-Size: 1015557
 Filename: haproxy-nossl_2.8.9-1_aarch64_generic.ipk
-Size: 1015162
-SHA256sum: a448445609f205e1be10604ceae4fc6a2a489adc581d14923d5fc68fd1e3345c
+Size: 1015152
+SHA256sum: 6b40cdba6cdf4f87f84598b68f94539c5b9855aa2e9ced0644f2773b24c36e0a
 Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
  This package is built without SSL support.
 
@@ -140,10 +179,10 @@ License: GPL-2.0-only
 Section: net
 CPE-ID: cpe:/a:haproxy:haproxy
 Architecture: aarch64_generic
-Installed-Size: 1118657
+Installed-Size: 1118658
 Filename: haproxy_2.8.9-1_aarch64_generic.ipk
-Size: 1117163
-SHA256sum: e2e1179ee50263e330c05b91d5cf5d513a9897dc1d313b153d9502eb7f29b937
+Size: 1117171
+SHA256sum: fc73639cdc65d0bdfb8207cba12493b4e98686a94e87b0bd030b4b52e1592115
 Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
  This package is built with SSL and LUA support.
 
@@ -153,10 +192,10 @@ Depends: libc, ca-bundle
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 6509449
+Installed-Size: 6509451
 Filename: hysteria_2.5.2-1_aarch64_generic.ipk
-Size: 6491006
-SHA256sum: 715176aa8ca33e125ed5fd89f4e0c36d16eabdfd23c074ab03ef1ee9f19a58b7
+Size: 6490906
+SHA256sum: a3eee9bce1aebb62f699c4b00e92db26a9d4dbee77b55ec90914a09a32add6e4
 Description:  Hysteria is a feature-packed network utility optimized for networks
  of poor quality (e.g. satellite connections, congested public Wi-Fi,
  connecting from China to servers abroad) powered by a custom version
@@ -179,10 +218,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 7803
+Installed-Size: 7802
 Filename: libQt6Concurrent_6.8.0-1_aarch64_generic.ipk
-Size: 8433
-SHA256sum: 3f142a8e2ad4c2987816a267fd7c08b8b7d735ad4fb52c427e771f5143f1a840
+Size: 8438
+SHA256sum: 04820bb3db9daad021ec89a25c4ee0ae72ceaffcd753b1f45a471edb394d3cd9
 Description:  This package provides the Qt6 Concurrent v6.8.0 library.
 
 Package: libQt6Core
@@ -190,10 +229,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libpcre2-16
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 2599619
+Installed-Size: 2599617
 Filename: libQt6Core_6.8.0-1_aarch64_generic.ipk
-Size: 2592584
-SHA256sum: 823e47cb2672a8edf17efe2344e5a275e9982a8a67baf231e0ef477a7e788ab1
+Size: 2592585
+SHA256sum: 9f27443b1e4bc79f9d4a0845e6a0294fd255002d5b6385919889adefa19479ef
 Description:  This package provides the Qt6 Core v6.8.0 library.
 
 Package: libQt6DBus
@@ -201,10 +240,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 336258
+Installed-Size: 336257
 Filename: libQt6DBus_6.8.0-1_aarch64_generic.ipk
-Size: 336408
-SHA256sum: 34445bf0ff931019da07a1eab51f4566cb64ee36d813af2294b0fe2efc0dd5fb
+Size: 336410
+SHA256sum: 32db2321c6495e1efc0faa27652f6581ef00a6a5c30f43ddb85d10bd4eb4df4f
 Description:  This package provides the Qt6 DBus v6.8.0 library.
 
 Package: libQt6Gui
@@ -214,8 +253,8 @@ Section: libs
 Architecture: aarch64_generic
 Installed-Size: 2961655
 Filename: libQt6Gui_6.8.0-1_aarch64_generic.ipk
-Size: 2956740
-SHA256sum: 324653a6ebacf9c66fe2946910294cb35a83f2fbb4388373464b14f22085cd29
+Size: 2956739
+SHA256sum: 4d4578ddb9a47d1732cebafe70a80a466df7fd8fd22e3219123fe7f6a81906d1
 Description:  This package provides the Qt6 Gui v6.8.0 library.
 
 Package: libQt6Network
@@ -223,10 +262,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core, libopenssl3, krb5-libs
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 912781
+Installed-Size: 912779
 Filename: libQt6Network_6.8.0-1_aarch64_generic.ipk
-Size: 911775
-SHA256sum: 17ba5ab1cf65f6a208a607a8d86348bd650c34f3a1d94dc643b3b7731dd7ceef
+Size: 911763
+SHA256sum: d1f3cb1eecc7c9cd0dc1c0a4c62cd8e92dceb334354ca2f5a3df15c25d7807bd
 Description:  This package provides the Qt6 Network v6.8.0 library.
 
 Package: libQt6PrintSupport
@@ -234,10 +273,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Widgets
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 167708
+Installed-Size: 167704
 Filename: libQt6PrintSupport_6.8.0-1_aarch64_generic.ipk
-Size: 167526
-SHA256sum: a9c2038c5bba1ddbd20dc1e320505b5239c15c673472ea06fa928a01bf02ba24
+Size: 167524
+SHA256sum: b2ea40f0457c093673579054a8cecc4dbec6f66549ac36b77cd54796a57093ab
 Description:  This package provides the Qt6 PrintSupport v6.8.0 library.
 
 Package: libQt6Sql
@@ -245,10 +284,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 89360
+Installed-Size: 89358
 Filename: libQt6Sql_6.8.0-1_aarch64_generic.ipk
-Size: 89874
-SHA256sum: 6a59e8fa2d44cf80ce619bd31ef3b2b6eccad7bbaaf62f1e80a38b5e661d99ad
+Size: 89884
+SHA256sum: 48dbce04602cfd6073f441e6aa3d8d6512af188dd172c7c2a156f3c1504e8f0c
 Description:  This package provides the Qt6 Sql v6.8.0 library.
 
 Package: libQt6Test
@@ -256,10 +295,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 145867
+Installed-Size: 145865
 Filename: libQt6Test_6.8.0-1_aarch64_generic.ipk
-Size: 146417
-SHA256sum: dfa758cf4f31cc8f0d22ded831ccc0c2ae59580e7576b247517ff856b24b7fcc
+Size: 146419
+SHA256sum: 4f761e37ab89d86febc53440dc3df458b6c93be2cdb75ee1f1d2ea2245fd1475
 Description:  This package provides the Qt6 Test v6.8.0 library.
 
 Package: libQt6Widgets
@@ -267,10 +306,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 3380840
+Installed-Size: 3380836
 Filename: libQt6Widgets_6.8.0-1_aarch64_generic.ipk
-Size: 3373801
-SHA256sum: e77fb5a36e0aefcc522c8c8c4e2241eb60c088db7963adcb9c0b1d513ece1813
+Size: 3373776
+SHA256sum: 18fc6af4d1bb4f36ec9a2e0b59a221856e927e9a3124c1e35004c0fb08324aa8
 Description:  This package provides the Qt6 Widgets v6.8.0 library.
 
 Package: libQt6Xml
@@ -278,10 +317,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Core
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 68849
+Installed-Size: 68847
 Filename: libQt6Xml_6.8.0-1_aarch64_generic.ipk
-Size: 69599
-SHA256sum: 9636ce3052279420b631138f2776aa7f8695bc7c1af23f2824109a7bd1e09d6a
+Size: 69596
+SHA256sum: db855f79e96217d94ce7d13741564bd7bdd42626d05d4ec5a317438c42d83f06
 Description:  This package provides the Qt6 Xml v6.8.0 library.
 
 Package: lua-neturl
@@ -444,14 +483,14 @@ SHA256sum: e5e353ddf1bd9d7e96f486f2df2a0081d94a9c57c420fa0295b0286657b07b5f
 Description:  LuCI support for MentoHUST
 
 Package: luci-app-mihomo
-Version: 1.8.7
+Version: 1.9.0
 Depends: libc, luci-base, mihomo
 Section: luci
 Architecture: all
-Installed-Size: 6132
-Filename: luci-app-mihomo_1.8.7_all.ipk
-Size: 6939
-SHA256sum: 8bacf84eea3f3340ab138937a1a653d59da1939929ffe738f1e1c4830a0060db
+Installed-Size: 6130
+Filename: luci-app-mihomo_1.9.0_all.ipk
+Size: 6936
+SHA256sum: 39a3b95694ba20a41161828ee0ebc4ba979d796d3b0e4b71edc36adad27d135e
 Description:  LuCI Support for mihomo
 
 Package: luci-app-mosdns
@@ -486,6 +525,17 @@ Filename: luci-app-netspeedtest_1.0_all.ipk
 Size: 8760
 SHA256sum: 8454559f785b34e75ef1b79cd204f1aa1b98d2d47fe819842658977ec3579b14
 Description:  LuCI Net Speedtest
+
+Package: luci-app-nlbwmon
+Version: git-24.295.72056-e82d0e7
+Depends: libc, nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 20968
+Filename: luci-app-nlbwmon_git-24.295.72056-e82d0e7_all.ipk
+Size: 21797
+SHA256sum: 0e69effc8053de5aa12a07da4a752656754738a19700de88aa29b0d391e6a3be
+Description:  Netlink based bandwidth accounting
 
 Package: luci-app-openclash
 Version: 0.46.033-beta
@@ -793,10 +843,10 @@ Version: git-24.283.78010-d89d4d3
 Depends: libc, luci-app-mihomo
 Section: luci
 Architecture: all
-Installed-Size: 2892
+Installed-Size: 2888
 Filename: luci-i18n-mihomo-zh-cn_git-24.283.78010-d89d4d3_all.ipk
-Size: 3618
-SHA256sum: 288619532e795575f9b6c58ae9139020be84de62ea464f2cd1362dc959d04ba0
+Size: 3613
+SHA256sum: eec64acd594cc8d47d734993983eab689bb0b967b9d4ae80d37acd9bef842289
 Description:  Translation for luci-app-mihomo - 简体中文 (Chinese Simplified)
 
 Package: luci-i18n-mosdns-zh-cn
@@ -831,6 +881,369 @@ Filename: luci-i18n-netspeedtest-zh-cn_git-24.283.78010-d89d4d3_all.ipk
 Size: 1560
 SHA256sum: 3f3a6b9dc0509b218595c5fc91dda1332300153c5e16f8b90e668f6fe50cbff2
 Description:  Translation for luci-app-netspeedtest - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-nlbwmon-ar
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 714
+Filename: luci-i18n-nlbwmon-ar_git-24.294.66634-9bc79da_all.ipk
+Size: 1458
+SHA256sum: ccb14261911c958c8f56f3aaeafedeb4104649d90c509c288d1dab252ff18c53
+Description:  Translation for luci-app-nlbwmon - العربية (Arabic)
+
+Package: luci-i18n-nlbwmon-bg
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 678
+Filename: luci-i18n-nlbwmon-bg_git-24.294.66634-9bc79da_all.ipk
+Size: 1427
+SHA256sum: 83df514c3f28dc1b917b6f868d2d7961c01485cc2e165135d4f4c2c6f7882a12
+Description:  Translation for luci-app-nlbwmon - български (Bulgarian)
+
+Package: luci-i18n-nlbwmon-bn
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 556
+Filename: luci-i18n-nlbwmon-bn_git-24.294.66634-9bc79da_all.ipk
+Size: 1298
+SHA256sum: 31042c0e5403315baded2e00d2b8d108c29b965d7711fb3d5e579b91496af422
+Description:  Translation for luci-app-nlbwmon - বাংলা (Bengali)
+
+Package: luci-i18n-nlbwmon-ca
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 527
+Filename: luci-i18n-nlbwmon-ca_git-24.294.66634-9bc79da_all.ipk
+Size: 1252
+SHA256sum: 1b044013a5a45970252efe7c8a87dad2a18524d9f777f31a7d4a7e88779bf036
+Description:  Translation for luci-app-nlbwmon - Català (Catalan)
+
+Package: luci-i18n-nlbwmon-cs
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 752
+Filename: luci-i18n-nlbwmon-cs_git-24.294.66634-9bc79da_all.ipk
+Size: 1483
+SHA256sum: 4848c090a6c2c2b898b37bf4e1c131876fe291d64c7b4a7aae205fea5a91c269
+Description:  Translation for luci-app-nlbwmon - Čeština (Czech)
+
+Package: luci-i18n-nlbwmon-da
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 663
+Filename: luci-i18n-nlbwmon-da_git-24.294.66634-9bc79da_all.ipk
+Size: 1386
+SHA256sum: 47be6a63f382db5ed7b7877d1dd82ca500c5a5b9ce05e10460fb9d6723d9fab1
+Description:  Translation for luci-app-nlbwmon - Dansk (Danish)
+
+Package: luci-i18n-nlbwmon-de
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3834
+Filename: luci-i18n-nlbwmon-de_git-24.294.66634-9bc79da_all.ipk
+Size: 4534
+SHA256sum: 296395fcd892f5c8e2ebbea2d2b1f88f1464011da9d8a2f492f356efb25b78a3
+Description:  Translation for luci-app-nlbwmon - Deutsch (German)
+
+Package: luci-i18n-nlbwmon-el
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 609
+Filename: luci-i18n-nlbwmon-el_git-24.294.66634-9bc79da_all.ipk
+Size: 1348
+SHA256sum: 9055452e35df7db5a44a8fcbf89a5acfdb7ba6eb27e8e1d6a138e406fc222c81
+Description:  Translation for luci-app-nlbwmon - Ελληνικά (Greek)
+
+Package: luci-i18n-nlbwmon-es
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3908
+Filename: luci-i18n-nlbwmon-es_git-24.294.66634-9bc79da_all.ipk
+Size: 4622
+SHA256sum: 8b9952fd62b323792b2fd19bc4c6dc5d2502b6df8ca1f37c254dc8dbb132dadf
+Description:  Translation for luci-app-nlbwmon - Español (Spanish)
+
+Package: luci-i18n-nlbwmon-fi
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 1387
+Filename: luci-i18n-nlbwmon-fi_git-24.294.66634-9bc79da_all.ipk
+Size: 2115
+SHA256sum: 4dfb163d42f48127571e42ed699859019d420710d7d642fca737e88ce11b4dff
+Description:  Translation for luci-app-nlbwmon - Suomi (Finnish)
+
+Package: luci-i18n-nlbwmon-fr
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 2062
+Filename: luci-i18n-nlbwmon-fr_git-24.294.66634-9bc79da_all.ipk
+Size: 2795
+SHA256sum: 7adab47c5b53bd5b1d016ee06a4981f34997a9e682c494641cefd76ff2513fd1
+Description:  Translation for luci-app-nlbwmon - Français (French)
+
+Package: luci-i18n-nlbwmon-he
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 1206
+Filename: luci-i18n-nlbwmon-he_git-24.294.66634-9bc79da_all.ipk
+Size: 1954
+SHA256sum: 0cdc1369b3fbfadfe2d96bb493fcab22b9dc0850677c44c9c3cfc9d725467104
+Description:  Translation for luci-app-nlbwmon - עִבְרִית (Hebrew)
+
+Package: luci-i18n-nlbwmon-hi
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 428
+Filename: luci-i18n-nlbwmon-hi_git-24.294.66634-9bc79da_all.ipk
+Size: 1157
+SHA256sum: 3afb3ec47cf53032bbde6f3dd4c3167d840c7bf8b82e1c6baee2a6ab2d1689fb
+Description:  Translation for luci-app-nlbwmon - हिंदी (Hindi)
+
+Package: luci-i18n-nlbwmon-hu
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3807
+Filename: luci-i18n-nlbwmon-hu_git-24.294.66634-9bc79da_all.ipk
+Size: 4515
+SHA256sum: 77a9e0cbcdb0e75224339cc26a9e797bc287dfabd56f8bd8c00bf81386a6764a
+Description:  Translation for luci-app-nlbwmon - Magyar (Hungarian)
+
+Package: luci-i18n-nlbwmon-it
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 819
+Filename: luci-i18n-nlbwmon-it_git-24.294.66634-9bc79da_all.ipk
+Size: 1536
+SHA256sum: 4e615097711bf6a074a03a2371456c5965e834f24c9871867db1fcda9bd8864c
+Description:  Translation for luci-app-nlbwmon - Italiano (Italian)
+
+Package: luci-i18n-nlbwmon-ja
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3933
+Filename: luci-i18n-nlbwmon-ja_git-24.294.66634-9bc79da_all.ipk
+Size: 4655
+SHA256sum: eec7e43812eee5f1416a6e8e0c7ce8e4303743a5e5cd15eb7d50aab3d0045e2d
+Description:  Translation for luci-app-nlbwmon - 日本語 (Japanese)
+
+Package: luci-i18n-nlbwmon-ko
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 558
+Filename: luci-i18n-nlbwmon-ko_git-24.294.66634-9bc79da_all.ipk
+Size: 1292
+SHA256sum: 079b3c0fd62873efac7f16b8eff49de3c77d19b7b669648ad7e0fa8dd429b33a
+Description:  Translation for luci-app-nlbwmon - 한국어 (Korean)
+
+Package: luci-i18n-nlbwmon-lt
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 4551
+Filename: luci-i18n-nlbwmon-lt_git-24.294.66634-9bc79da_all.ipk
+Size: 5265
+SHA256sum: 43f572e7bfe701811bda67162d9d0f32db32f606f3019c48b47520027c650d99
+Description:  Translation for luci-app-nlbwmon - Lietuvių (Lithuanian)
+
+Package: luci-i18n-nlbwmon-mr
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 637
+Filename: luci-i18n-nlbwmon-mr_git-24.294.66634-9bc79da_all.ipk
+Size: 1375
+SHA256sum: d3635e2f86119120b939b4ec8ab5381f510e2cc402f9bb7a44fa53add75f80ff
+Description:  Translation for luci-app-nlbwmon - Marāṭhī (Marathi)
+
+Package: luci-i18n-nlbwmon-ms
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 483
+Filename: luci-i18n-nlbwmon-ms_git-24.294.66634-9bc79da_all.ipk
+Size: 1207
+SHA256sum: 3944f7d5569e4497710fc35af1e59b932fd3f760cfd53c826c4fe3ba4061229f
+Description:  Translation for luci-app-nlbwmon - Bahasa Melayu (Malay)
+
+Package: luci-i18n-nlbwmon-no
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 575
+Filename: luci-i18n-nlbwmon-no_git-24.294.66634-9bc79da_all.ipk
+Size: 1297
+SHA256sum: 76b5ed8bbd4b38fefe78fd2868216b7d602d92dda27412d439314dc67f5b0da1
+Description:  Translation for luci-app-nlbwmon - Norsk (Norwegian)
+
+Package: luci-i18n-nlbwmon-pl
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 4000
+Filename: luci-i18n-nlbwmon-pl_git-24.294.66634-9bc79da_all.ipk
+Size: 4706
+SHA256sum: 70843c1f6920f5685657a6178528b6ea9188cd760b8c245f77553aa1401bde40
+Description:  Translation for luci-app-nlbwmon - Polski (Polish)
+
+Package: luci-i18n-nlbwmon-pt-br
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3892
+Filename: luci-i18n-nlbwmon-pt-br_git-24.294.66634-9bc79da_all.ipk
+Size: 4623
+SHA256sum: be2da0cade29c09864179a84e45f7d866fe3f7cf6460b8947934afb7b8636802
+Description:  Translation for luci-app-nlbwmon - Português do Brasil (Brazilian Portuguese)
+
+Package: luci-i18n-nlbwmon-pt
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3879
+Filename: luci-i18n-nlbwmon-pt_git-24.294.66634-9bc79da_all.ipk
+Size: 4582
+SHA256sum: 83913fe6c627bcf32bd4fada5a6be806e20e05ef37295fca42471950ef45d37a
+Description:  Translation for luci-app-nlbwmon - Português (Portuguese)
+
+Package: luci-i18n-nlbwmon-ro
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 4030
+Filename: luci-i18n-nlbwmon-ro_git-24.294.66634-9bc79da_all.ipk
+Size: 4744
+SHA256sum: 8e09be2c071806d29b6a1ac771c292b1ffd06fef8a3bf9699ce21c1c297d642f
+Description:  Translation for luci-app-nlbwmon - Română (Romanian)
+
+Package: luci-i18n-nlbwmon-ru
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 4519
+Filename: luci-i18n-nlbwmon-ru_git-24.294.66634-9bc79da_all.ipk
+Size: 5252
+SHA256sum: 87e242ed5aabc97c73655c46e67b8685a7f032b8d3e49ba2e3cc74d143602f02
+Description:  Translation for luci-app-nlbwmon - Русский (Russian)
+
+Package: luci-i18n-nlbwmon-sk
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 703
+Filename: luci-i18n-nlbwmon-sk_git-24.294.66634-9bc79da_all.ipk
+Size: 1435
+SHA256sum: 569798a4ad011b606e8270aa461a4691f8cf2cd16ce5254364d7456a64f3a582
+Description:  Translation for luci-app-nlbwmon - Slovenčina (Slovak)
+
+Package: luci-i18n-nlbwmon-sv
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 1145
+Filename: luci-i18n-nlbwmon-sv_git-24.294.66634-9bc79da_all.ipk
+Size: 1868
+SHA256sum: 80ec63f56ed1e79d018d999eacc630d9b4613fb1a95e5c22e567d7c8d976838d
+Description:  Translation for luci-app-nlbwmon - Svenska (Swedish)
+
+Package: luci-i18n-nlbwmon-tr
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3874
+Filename: luci-i18n-nlbwmon-tr_git-24.294.66634-9bc79da_all.ipk
+Size: 4583
+SHA256sum: f436469e13b29a8171a8e5346abb761f9eb73f0540d04a2b7df6ac4c056e1951
+Description:  Translation for luci-app-nlbwmon - Türkçe (Turkish)
+
+Package: luci-i18n-nlbwmon-uk
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 873
+Filename: luci-i18n-nlbwmon-uk_git-24.294.66634-9bc79da_all.ipk
+Size: 1622
+SHA256sum: 9cad698fa98c1e5e23417b438678fd9a4b8d32af771a98042259777f935a8140
+Description:  Translation for luci-app-nlbwmon - Українська (Ukrainian)
+
+Package: luci-i18n-nlbwmon-vi
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3879
+Filename: luci-i18n-nlbwmon-vi_git-24.294.66634-9bc79da_all.ipk
+Size: 4610
+SHA256sum: 560a23667873a8dda76a4f7a29e2184ce4110f12e038a85b9f8d1e55f8ef997b
+Description:  Translation for luci-app-nlbwmon - Tiếng Việt (Vietnamese)
+
+Package: luci-i18n-nlbwmon-zh-cn
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3659
+Filename: luci-i18n-nlbwmon-zh-cn_git-24.294.66634-9bc79da_all.ipk
+Size: 4394
+SHA256sum: 433a6afdcacdfae1d86bf4a1a07e41772c8c4fec56d49a886500d7d94f35b898
+Description:  Translation for luci-app-nlbwmon - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-nlbwmon-zh-tw
+Version: git-24.294.66634-9bc79da
+Depends: libc, luci-app-nlbwmon
+Section: luci
+Architecture: all
+Installed-Size: 3733
+Filename: luci-i18n-nlbwmon-zh-tw_git-24.294.66634-9bc79da_all.ipk
+Size: 4467
+SHA256sum: 3ce0640010a996ff6d58b2f56808a6bb2466e69d796bd84543ad3297509aae1c
+Description:  Translation for luci-app-nlbwmon - 繁體中文 (Chinese Traditional)
 
 Package: luci-i18n-passwall-zh-cn
 Version: git-24.283.78010-d89d4d3
@@ -980,15 +1393,15 @@ Description:  A SOCKS5 service that you can run on your remote boxes to tunnel c
  through them, if for some reason SSH doesn't cut it for you.
 
 Package: mihomo
-Version: 2024-10-12-ca3f1eba-1
-Depends: libc, ca-bundle, curl, yq, firewall4, kmod-nft-tproxy, ip-full, kmod-tun, procd-ujail
+Version: 2024-10-20-3e966e82-1
+Depends: libc, ca-bundle, curl, yq, firewall4, ip-full, kmod-inet-diag, kmod-nft-tproxy, kmod-tun
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 10100832
-Filename: mihomo_2024-10-12-ca3f1eba-1_aarch64_generic.ipk
-Size: 10069358
-SHA256sum: b7c119c0159f714715172028da1c30db0e884df4a450c374f95c8e552e66509e
+Installed-Size: 10102217
+Filename: mihomo_2024-10-20-3e966e82-1_aarch64_generic.ipk
+Size: 10071045
+SHA256sum: 96d1b357ffe0b2feb5599bc7480fc7ceac56a78d8ebf468fca4c5c634f0f8d5b
 Description:  A rule based proxy in Go.
 
 Package: mosdns
@@ -997,10 +1410,10 @@ Depends: libc, ca-bundle
 License: GPL-3.0
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 6156347
+Installed-Size: 6156273
 Filename: mosdns_5.3.3-2_aarch64_generic.ipk
-Size: 6137699
-SHA256sum: 26ad01359e53ea3a9ac5bf82f7e849dcbbb4348450a08d95723d746de183dc60
+Size: 6137431
+SHA256sum: bf4bacbe66dbbf13782f7f33cc5ba7d5d084dfd0cca2cd4187700b90d99a5a89
 Description:  A plug-in DNS forwarder/splitter
 
 Package: naiveproxy
@@ -1054,10 +1467,10 @@ License: GPL-2.0+
 Section: net
 CPE-ID: cpe:/a:qbittorrent:qbittorrent
 Architecture: aarch64_generic
-Installed-Size: 7726432
+Installed-Size: 7726431
 Filename: qbittorrent_5.0.0-1_aarch64_generic.ipk
-Size: 7720428
-SHA256sum: 1af77cfd5501d57f040a2e629578f0417d3efef9c688f5a1016c059dba564af6
+Size: 7720406
+SHA256sum: fd207b521243721db8ac639ac8f5c7a671b2e187e9623ee8356f30e2e7bd79bf
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out
@@ -1070,10 +1483,10 @@ Depends: libc, kmod-sched, ip-full, kmod-veth, tc-full, kmod-netem, kmod-sched-c
 License: GPL-3.0-or-later
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 15874
+Installed-Size: 15871
 Filename: qosmate_0.5.27-1_aarch64_generic.ipk
-Size: 16706
-SHA256sum: b1ad68b06ec9886c09774d23841c8e0e5d15e97523f1a7f49303217fbbf97429
+Size: 16693
+SHA256sum: 2fdbf7f82af59173b1941332e747aae2ded7c0e799e1b4aea712a08ef27d3d02
 Description:  QoSmate is a Quality of Service management tool for OpenWrt
 
 Package: qt6-plugin-libqcertonlybackend
@@ -1081,10 +1494,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 38839
+Installed-Size: 38838
 Filename: qt6-plugin-libqcertonlybackend_6.8.0-1_aarch64_generic.ipk
 Size: 39444
-SHA256sum: ff743468ab6a9a28a0c11f4342edf1d1d23d28159c72c561ef38c481f54fc180
+SHA256sum: 52958f37ec00ca826d9ae5941f3dae2a6b58f0a91d413d3463cf3c3abbfd6f69
 Description:  Qt6 Plugin libqcertonlybackend
 
 Package: qt6-plugin-libqminimal
@@ -1092,10 +1505,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 10095
+Installed-Size: 10094
 Filename: qt6-plugin-libqminimal_6.8.0-1_aarch64_generic.ipk
-Size: 10638
-SHA256sum: 054a343317bb87bae39a59b5b1e1cc0415fa86caed95af3724a63b597070d2a7
+Size: 10636
+SHA256sum: 9aa1678c0b05abd519f4c22ac8179602ba34e55834d3c6976fd0783e35c0d79b
 Description:  Qt6 Plugin libqminimal
 
 Package: qt6-plugin-libqnetworkmanager
@@ -1103,10 +1516,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6DBus, libQt6Network
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 27973
+Installed-Size: 27972
 Filename: qt6-plugin-libqnetworkmanager_6.8.0-1_aarch64_generic.ipk
-Size: 28470
-SHA256sum: 87975972043b3999bc220ef2ae91cd519671a97afc1e2682dacedf504735608c
+Size: 28464
+SHA256sum: 08b8e5002d61c7202bddb6e661d7519348fa364e574735f66ef0ccd696520307
 Description:  Qt6 Plugin libqnetworkmanager
 
 Package: qt6-plugin-libqoffscreen
@@ -1114,10 +1527,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 38714
+Installed-Size: 38715
 Filename: qt6-plugin-libqoffscreen_6.8.0-1_aarch64_generic.ipk
-Size: 39221
-SHA256sum: 77521f707b18d0c322a91d8d81091444bd9e9d41f4dac8a034e952d1876a3d12
+Size: 39218
+SHA256sum: eab03deb869fa9e0de8ea5b30190d676425096eba9093c585fa0dd3901c459e5
 Description:  Qt6 Plugin libqoffscreen
 
 Package: qt6-plugin-libqopensslbackend
@@ -1125,10 +1538,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Network
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 120719
+Installed-Size: 120713
 Filename: qt6-plugin-libqopensslbackend_6.8.0-1_aarch64_generic.ipk
-Size: 120871
-SHA256sum: 7ff28c20b753b485aadec71698f446b6ac7b51ef546700f7a249b5453b20b089
+Size: 120886
+SHA256sum: 9af32a8bd3ce5a7114245fb110380ad0755905db70c283bd217073c90e06b57a
 Description:  Qt6 Plugin libqopensslbackend
 
 Package: qt6-plugin-libqsqlite
@@ -1136,10 +1549,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Sql
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 972546
+Installed-Size: 972545
 Filename: qt6-plugin-libqsqlite_6.8.0-1_aarch64_generic.ipk
-Size: 972546
-SHA256sum: 5b49732bb713f162336febbb773308711da9148f037f2edad51f3bd0052d193b
+Size: 972543
+SHA256sum: 4713cdc62cd2b7cba1e50e780a81c52510fc30518d2941eb02d5ed750eba2293
 Description:  Qt6 Plugin libqsqlite
 
 Package: qt6-plugin-libqtuiotouchplugin
@@ -1147,10 +1560,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui, libQt6Network
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 37742
+Installed-Size: 37741
 Filename: qt6-plugin-libqtuiotouchplugin_6.8.0-1_aarch64_generic.ipk
-Size: 38357
-SHA256sum: f67ffd83eb25ac6bdb924810d761cfa2fa5fc7f333916ae9f527b3d5fc8e28ba
+Size: 38361
+SHA256sum: 5af5d64c643a1016d3f8a05b472e411a65256dcdc4c1a485573dbfd4cff97258
 Description:  Qt6 Plugin libqtuiotouchplugin
 
 Package: qt6-plugin-libqxdgdesktopportal
@@ -1158,10 +1571,10 @@ Version: 6.8.0-1
 Depends: libc, libatomic1, libstdcpp6, zlib, libQt6Gui
 Section: libs
 Architecture: aarch64_generic
-Installed-Size: 45376
+Installed-Size: 45373
 Filename: qt6-plugin-libqxdgdesktopportal_6.8.0-1_aarch64_generic.ipk
-Size: 46085
-SHA256sum: 7c542e9b465babc243592c55ee14ed6c4de55d00bf10c431cc37256e520d36dd
+Size: 46079
+SHA256sum: a08437e900aa7cb4bdaf8cbb5e944aa4ffaa397bb61f3c941433aada98664ed4
 Description:  Qt6 Plugin libqxdgdesktopportal
 
 Package: rblibtorrent2.0
@@ -1192,6 +1605,19 @@ Size: 59773
 SHA256sum: 7d24d50b14f80dd56880afc58d38e99f6daf0967236aeef24ac602faa6d4b106
 Description:  This is a modified version of original redsocks.
  Transparent redirector of any TCP/UDP connection to proxy.
+
+Package: runc
+Version: 1.1.14-1
+Depends: libc, libseccomp
+License: Apache-2.0
+Section: utils
+CPE-ID: cpe:/a:linuxfoundation:runc
+Architecture: aarch64_generic
+Installed-Size: 3601229
+Filename: runc_1.1.14-1_aarch64_generic.ipk
+Size: 3574437
+SHA256sum: 460ccb091d72547c8e1399903fe552df60c4526a49a687fc0fcda727b514d0d3
+Description:  runc is a CLI tool for spawning and running containers according to the OCI specification.
 
 Package: shadow-tls
 Version: 0.2.25-1
@@ -1433,10 +1859,10 @@ Depends: libc, ca-bundle, kmod-inet-diag, kmod-netlink-diag, kmod-tun
 License: GPL-3.0-or-later
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 10073907
+Installed-Size: 10073962
 Filename: sing-box_1.10.1-1_aarch64_generic.ipk
-Size: 10042954
-SHA256sum: 0d802f646738177fc3948272866e4e67347e0459843ba67724dad44dbfff8c44
+Size: 10042971
+SHA256sum: af9552b69bd47b84a1c44eba66946e31df1d3496297de0b97c47bad86ee981dc
 Description:  The universal proxy platform
 
 Package: speedtest-cli
@@ -1503,10 +1929,10 @@ Depends: libc
 License: GPL-3.0
 Section: utils
 Architecture: aarch64_generic
-Installed-Size: 2816615
+Installed-Size: 2816633
 Filename: v2dat_2022-12-15-47b8ee51-1_aarch64_generic.ipk
-Size: 2808482
-SHA256sum: ab295ec6533cbfb91ec56e0db7da1a64143559c9d2c04e75ea1aeb22518ddb5b
+Size: 2808602
+SHA256sum: 81d9658c9c416151e7298b87a54c206d7659dc9fb04e08e5b11594e67635e065
 Description:  V2ray geo/ip data unpack tools
 
 Package: v2ray-core
@@ -1515,10 +1941,10 @@ Depends: libc, ca-bundle
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 11400669
+Installed-Size: 11400649
 Filename: v2ray-core_5.21.0-1_aarch64_generic.ipk
-Size: 11359266
-SHA256sum: 074c4543b5b631bf1b7d6a64c646c970355d32f28ea8381f32a4c05fa480ade7
+Size: 11360677
+SHA256sum: b31bfbb0c57cd39ebe80f8d41ca86800a2e78d635a8319310261d4284723e681
 Description:  Project V is a set of network tools that help you to build your own computer network.
  It secures your network connections and thus protects your privacy.
 
@@ -1543,10 +1969,10 @@ Depends: libc, ca-bundle
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 4996281
+Installed-Size: 4996367
 Filename: v2ray-plugin_5.17.0-1_aarch64_generic.ipk
-Size: 4982264
-SHA256sum: 6eb152aecd5bbebda41d8eb6966b49b8e53bf0e42e90f6bedbf32f0999172b17
+Size: 4982216
+SHA256sum: 77b8c05efa263537d4eef9794770c8aecb767ed39af02e88e7a8fe56f2b4c1e0
 Description:  SIP003 plugin for shadowsocks, based on v2ray
 
 Package: vlmcsd
@@ -1557,8 +1983,8 @@ Section: net
 Architecture: aarch64_generic
 Installed-Size: 24582
 Filename: vlmcsd_svn1113-4_aarch64_generic.ipk
-Size: 25266
-SHA256sum: 7a9618025a2a22fc716a3dec9dd6be919d35ef137200d8be5c13feea895197b9
+Size: 25265
+SHA256sum: 1fb22ae62d4ccec533f3c98d5d510df622b0000c5e11efcbbef6dca7682f2c1e
 Description:  vlmcsd is a KMS Emulator in C.
 
 Package: xray-core
@@ -1567,10 +1993,10 @@ Depends: libc, ca-bundle
 License: MPL-2.0
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 9990671
+Installed-Size: 9990607
 Filename: xray-core_1.8.24-1_aarch64_generic.ipk
-Size: 9957975
-SHA256sum: 4af06fb3c5cc513c3944f5e3480be18b2fb881f753113e85404952d9e0ed8039
+Size: 9957969
+SHA256sum: 3d6b6002554933eaa7a1e1e456ad751cf12e9e17323ecaf43503aea277291878
 Description:  Xray, Penetrates Everything. It helps you to build your own computer network.
  It secures your network connections and thus protects your privacy.
 
@@ -1580,10 +2006,10 @@ Depends: libc, ca-bundle
 License: MIT
 Section: net
 Architecture: aarch64_generic
-Installed-Size: 6484333
+Installed-Size: 6484180
 Filename: xray-plugin_1.8.24-1_aarch64_generic.ipk
-Size: 6464473
-SHA256sum: e6e27a3ed9d3055ca0fa042cc9cd27170d6cf05b5e8f3f0516ea5f0b8ddfeb02
+Size: 6464205
+SHA256sum: 5d6e3375c10f2c2aeb563111a7a27ffb84ae6d6943e9be86f919eb2a05405411
 Description:  SIP003 plugin for Shadowsocks, based on Xray
 
 Package: zip
