@@ -99,6 +99,7 @@ rm -rf luci-app-frpc/po/!(templates|zh_Hans)
 patch -p1 -f -s patch-luci-app-frpc-hide-token.patch
 patch -p1 -f -s patch-luci-app-frpc-add-enable-flag.patch
 mv openwrt/packages/net/frp ./
+sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' frp/Makefile
 sed -i 's/procd_set_param stdout $stdout/procd_set_param stdout 0/g' frp/files/frpc.init
 sed -i 's/procd_set_param stderr $stderr/procd_set_param stderr 0/g' frp/files/frpc.init
 sed -i 's/stdout stderr //g' frp/files/frpc.init
@@ -166,16 +167,20 @@ sed -i 's/0666/0644/g;s/0777/0755/g' feeds/packages/net/samba4/files/smb.conf.te
 sed -i 's/解除网易云音乐播放限制/网易云音乐解锁/g' luci-app-unblockneteasemusic/root/usr/share/luci/menu.d/luci-app-unblockneteasemusic.json
 
 # docker
+sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' packages_utils_containerd/Makefile
+sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' packages_utils_docker/Makefile
+sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' packages_utils_dockerd/Makefile
+sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' packages_utils_runc/Makefile
 
 # nlbwmon
 mv openwrt/packages/net/nlbwmon ./
 sed -i 's/stderr 1/stderr 0/g' nlbwmon/files/nlbwmon.init
 mv openwrt/luci/applications/luci-app-nlbwmon ./
-sed -i 's/services/network/g' feeds/luci/applications/luci-app-nlbwmon/root/usr/share/luci/menu.d/luci-app-nlbwmon.json
-sed -i 's/services/network/g' feeds/luci/applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js
+sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-nlbwmon/Makefile
+sed -i 's/services/network/g' luci-app-nlbwmon/root/usr/share/luci/menu.d/luci-app-nlbwmon.json
+sed -i 's/services/network/g' luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js
 
 # haproxy
 mv openwrt/packages/net/haproxy ./
-
 
 rm -rf openwrt immortalwrt
