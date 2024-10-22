@@ -1,1 +1,1 @@
-{"architecture": "x86_64", "packages":{"alist": "3.38.0-1", "luci-app-alist": "1.1.1", "luci-i18n-alist-zh-cn": "git-24.283.78010-d89d4d3"}}
+{"architecture": "x86_64", "packages":{"luci-app-alist": "1.1.1", "luci-i18n-alist-zh-cn": "git-24.283.78010-d89d4d3"}}
