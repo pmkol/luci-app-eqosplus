@@ -48,7 +48,7 @@ jobs:
           ref: pkgs
 
       - name: Build Packages
-        uses: pmkol/openwrt-gh-action-sdk@main
+        uses: sbwml/openwrt-gh-action-sdk@go1.23
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.tag }}
           FEEDNAME: packages_lite
