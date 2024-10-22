@@ -7,11 +7,10 @@
 
 //	[Widget, Option, Title, Description, {Param: 'Value'}],
 var startupConf = [
-	[form.Flag, 'stdout', _('Log stdout')],
-	[form.Flag, 'stderr', _('Log stderr')],
+	[form.Flag, 'enable', _('Enable'), undefined, {datatype: 'bool', default: 'true', rmempty: false}],
 	[widgets.UserSelect, 'user', _('Run daemon as user')],
 	[widgets.GroupSelect, 'group', _('Run daemon as group')],
-	[form.Flag, 'respawn', _('Respawn when crashed')],
+	[form.Flag, 'respawn', _('Respawn when crashed'), undefined, {datatype: 'bool', default: 'true', rmempty: false}],
 	[form.DynamicList, 'env', _('Environment variable'), _('OS environments pass to frp for config file template, see <a href="https://github.com/fatedier/frp#configuration-file-template">frp README</a>'), {placeholder: 'ENV_NAME=value'}],
 	[form.DynamicList, 'conf_inc', _('Additional configs'), _('Config files include in temporary config file'), {placeholder: '/etc/frp/frpc.d/frpc_full.ini'}]
 ];
@@ -24,7 +23,7 @@ var commonConf = [
 	[form.ListValue, 'log_level', _('Log level'), _('LogLevel specifies the minimum log level. Valid values are "trace", "debug", "info", "warn", and "error".<br />By default, this value is "info".'), {values: ['trace', 'debug', 'info', 'warn', 'error']}],
 	[form.Value, 'log_max_days', _('Log max days'), _('LogMaxDays specifies the maximum number of days to store log information before deletion. This is only used if LogWay == "file".<br />By default, this value is 0.'), {datatype: 'uinteger'}],
 	[form.Flag, 'disable_log_color', _('Disable log color'), _('DisableLogColor disables log colors when LogWay == "console" when set to true.'), {datatype: 'bool', default: 'false'}],
-	[form.Value, 'token', _('Token'), _('Token specifies the authorization token used to create keys to be sent to the server. The server must have a matching token for authorization to succeed. <br />By default, this value is "".')],
+	[form.Value, 'token', _('Token'), _('Token specifies the authorization token used to create keys to be sent to the server. The server must have a matching token for authorization to succeed. <br />By default, this value is "".'), {password: true}],
 	[form.Value, 'admin_addr', _('Admin address'), _('AdminAddr specifies the address that the admin server binds to.<br />By default, this value is "127.0.0.1".'), {datatype: 'ipaddr'}],
 	[form.Value, 'admin_port', _('Admin port'), _('AdminPort specifies the port for the admin server to listen on. If this value is 0, the admin server will not be started.<br />By default, this value is 0.'), {datatype: 'port'}],
 	[form.Value, 'admin_user', _('Admin user'), _('AdminUser specifies the username that the admin server will use for login.<br />By default, this value is "admin".')],

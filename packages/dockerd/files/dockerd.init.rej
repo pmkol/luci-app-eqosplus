@@ -1,0 +1,10 @@
+--- dockerd/files/dockerd.init
++++ dockerd/files/dockerd.init
+@@ -196,6 +197,7 @@ process_config() {
+ 	json_add_string "data-root" "${data_root}"
+ 	json_add_string "log-level" "${log_level}"
+ 	json_add_boolean "iptables" "${iptables}"
++	json_add_boolean "ip6tables" "${ip6tables}"
+ 	[ "${buildkit}" = "1" ] && {
+ 		json_add_object 'features'
+ 		json_add_boolean "buildkit" "${buildkit}"
