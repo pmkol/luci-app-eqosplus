@@ -1,3 +1,19 @@
+Package: alist
+Version: 3.38.0-1
+Depends: libc, ca-bundle
+Source: /feed/alist
+SourceName: alist
+License: GPL-3.0
+Section: net
+SourceDateEpoch: 1729449034
+Maintainer: sbwml <admin@cooluc.com>
+Architecture: x86_64
+Installed-Size: 28788127
+Filename: alist_3.38.0-1_x86_64.ipk
+Size: 28651410
+SHA256sum: 10f8199dbbbccef35dc68eeaeb4ad96256a2d2e43ee8733bf2417a91ccc69119
+Description:  A file list program that supports multiple storage, powered by Gin and Solidjs.
+
 Package: luci-app-alist
 Version: 1.1.1
 Depends: libc, alist
