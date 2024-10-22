@@ -26,7 +26,7 @@ jobs:
           [ -d .git ] && git init
           git add .
           git commit -sm "Sync - ${{env.latest_release}}"
-          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pkgs
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pkgs --force
 
   build:
     name: Build ${{ matrix.arch }}-${{ matrix.tag }}
