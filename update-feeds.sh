@@ -1,5 +1,8 @@
 #!/bin/bash
 
+mkdir -p packages
+cd packages
+
 # backup feeds
 shopt -s extglob
 mkdir -p /tmp/bak/
