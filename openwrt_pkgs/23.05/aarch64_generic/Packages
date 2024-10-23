@@ -11,6 +11,18 @@ Size: 35958307
 SHA256sum: 8c3572614df8474877452755d3f7872712b64264520544f35b8ec460c025f1ef
 Description:  An industry-standard container runtime with an emphasis on simplicity, robustness and portability
 
+Package: dockerd
+Version: 27.3.1-1
+Depends: libc, ca-certificates, containerd, iptables, iptables-mod-extra, ip6tables, kmod-ipt-nat6, libseccomp, kmod-ipt-nat, kmod-ipt-physdev, kmod-nf-ipvs, kmod-veth, tini, uci-firewall
+License: Apache-2.0
+Section: utils
+Architecture: aarch64_generic
+Installed-Size: 20633882
+Filename: dockerd_27.3.1-1_aarch64_generic.ipk
+Size: 20550679
+SHA256sum: 5ba4738d65bd2673405c373f9a7e3b292788da14410cbf634df1ed379ae31a72
+Description:  The Docker CE Engine.
+
 Package: liburing
 Version: 2.7-1
 Depends: libc
@@ -38,4 +50,95 @@ Filename: runc_1.1.14-1_aarch64_generic.ipk
 Size: 3574707
 SHA256sum: 878f0ed7cb8cc21ab9671d9d6773b8bd3c9cad1be324ef44a2b283ec97260996
 Description:  runc is a CLI tool for spawning and running containers according to the OCI specification.
+
+Package: samba4-admin
+Version: 4.21.1-1
+Depends: libc, samba4-libs
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: aarch64_generic
+Installed-Size: 1005736
+Filename: samba4-admin_4.21.1-1_aarch64_generic.ipk
+Size: 997682
+SHA256sum: 2c3db887b41d69b8239dbcf66d10b90cbc01293dc531bb502cd6979ec2574640
+Description:  installs: net smbcontrol profiles rpcclient dbwrap_tool eventlogadm
+ ldbadd ldbdel ldbedit ldbmodify ldbrename ldbsearch
+ tdbbackup tdbdump tdbrestore tdbtool
+ 
+ Administration tools collection
+
+Package: samba4-client
+Version: 4.21.1-1
+Depends: libc, samba4-libs
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: aarch64_generic
+Installed-Size: 103110
+Filename: samba4-client_4.21.1-1_aarch64_generic.ipk
+Size: 103452
+SHA256sum: 9f0e88fb85f251365233177dbb2eed35bad02afc6230aa658b836f5fd352873e
+Description:  installs: cifsdd smbclient smbget
+ 
+ The smbclient program implements a simple ftp-like client for accessing SMB shares
+
+Package: samba4-libs
+Version: 4.21.1-1
+Depends: libc, libtirpc, libreadline8, libpopt0, libcap, zlib, libgnutls, libtasn1, libuuid1, libopenssl3, libpthread, liburing, libpam, attr, libavahi-client
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: aarch64_generic
+Installed-Size: 9623478
+Filename: samba4-libs_4.21.1-1_aarch64_generic.ipk
+Size: 9540532
+SHA256sum: 1b15098e62a8d1fbf899972f58f4f95eacb882ac3501f309db702c040dce083a
+Description:  Samba 4.21.1 libs
+
+Package: samba4-server
+Version: 4.21.1-1
+Depends: libc, samba4-libs
+Conflicts: samba36-server
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: aarch64_generic
+Installed-Size: 257863
+Filename: samba4-server_4.21.1-1_aarch64_generic.ipk
+Size: 257802
+SHA256sum: c1c172ce73dad7d6a0db6c1a75ccface6de784863dea1962a723d993a5e02d4e
+Description:  installs: smbd (nmbd) smbpasswd pdbedit testparm (nmblookup) (smbcacls sharesec)
+ (samba samba-tool ntlm_auth samba-gpupdate samba_dnsupdate samba_kcc samba_spnupdate samba_upgradedns samba_downgrade_db)
+ 
+ This provides the basic fileserver service and is the minimum needed to serve file shares.
+ HINT: https://fitzcarraldoblog.wordpress.com/2016/10/17/a-correct-method-of-configuring-samba-for-browsing-smb-shares-in-a-home-network/
+
+Package: samba4-utils
+Version: 4.21.1-1
+Depends: libc, samba4-libs
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: aarch64_generic
+Installed-Size: 34485
+Filename: samba4-utils_4.21.1-1_aarch64_generic.ipk
+Size: 34854
+SHA256sum: 2afb0e7dccfb20b66260dad247bda79a68b6b3e4e00d7fa4505bc16ab0750c07
+Description:  installs: smbstatus smbtree mvxattr smbtar (smbcquotas)
+ 
+ Utilities collection
+
+Package: tini
+Version: 0.19.0-2
+Depends: libc
+License: MIT
+Section: utils
+CPE-ID: cpe:/a:tini_project:tini
+Architecture: aarch64_generic
+Installed-Size: 39745
+Filename: tini_0.19.0-2_aarch64_generic.ipk
+Size: 40338
+SHA256sum: 0456b8ba0e4c7417ab1a8170f687d07e5abcc7a4bb5a97eb53d10a6c64c10bde
+Description:  A tiny but valid init process for containers.
 
