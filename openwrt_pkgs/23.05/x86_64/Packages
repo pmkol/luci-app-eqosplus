@@ -1,34 +1,144 @@
-Package: alist
-Version: 3.38.0-1
-Depends: libc, ca-bundle
-License: GPL-3.0
-Section: net
+Package: containerd
+Version: 1.7.22-1
+Depends: libc, btrfs-progs, runc
+License: Apache-2.0
+Section: utils
+CPE-ID: cpe:/a:linuxfoundation:containerd
 Architecture: x86_64
-Installed-Size: 28788127
-Filename: alist_3.38.0-1_x86_64.ipk
-Size: 28651410
-SHA256sum: 10f8199dbbbccef35dc68eeaeb4ad96256a2d2e43ee8733bf2417a91ccc69119
-Description:  A file list program that supports multiple storage, powered by Gin and Solidjs.
+Installed-Size: 49761960
+Filename: containerd_1.7.22-1_x86_64.ipk
+Size: 49442732
+SHA256sum: 12101541793b228dfaf3949ff307257f44e32dcd4354ec9a964f12bb09c84194
+Description:  An industry-standard container runtime with an emphasis on simplicity, robustness and portability
 
-Package: luci-app-alist
-Version: 1.1.1
-Depends: libc, alist
-Section: luci
-Architecture: all
-Installed-Size: 4146
-Filename: luci-app-alist_1.1.1_all.ipk
-Size: 4941
-SHA256sum: 4662f8a402ebbb917a06e07e8019e76ea8155b57e227cfe571eb92a3ef6439f7
-Description:  LuCI support for alist
+Package: dockerd
+Version: 27.3.1-1
+Depends: libc, ca-certificates, containerd, iptables, iptables-mod-extra, ip6tables, kmod-ipt-nat6, libseccomp, kmod-ipt-nat, kmod-ipt-physdev, kmod-nf-ipvs, kmod-veth, tini, uci-firewall
+License: Apache-2.0
+Section: utils
+Architecture: x86_64
+Installed-Size: 22532353
+Filename: dockerd_27.3.1-1_x86_64.ipk
+Size: 22454120
+SHA256sum: 5c7ff5a59ac869009b00d603c2cd739cd251897157235a73afd6572cd62b33f1
+Description:  The Docker CE Engine.
 
-Package: luci-i18n-alist-zh-cn
-Version: git-24.283.78010-d89d4d3
-Depends: libc, luci-app-alist
-Section: luci
-Architecture: all
-Installed-Size: 1938
-Filename: luci-i18n-alist-zh-cn_git-24.283.78010-d89d4d3_all.ipk
-Size: 2697
-SHA256sum: b185d0c1b0c20f2448f2699c53736c84c71d86e2a090b67badd328a584966fd4
-Description:  Translation for luci-app-alist - 简体中文 (Chinese Simplified)
+Package: liburing
+Version: 2.7-1
+Depends: libc
+License: MIT
+Section: libs
+Architecture: x86_64
+Installed-Size: 7780
+Filename: liburing_2.7-1_x86_64.ipk
+Size: 8672
+SHA256sum: 6f7f5f2a04894aeaaa919f52896b3cd4704dc46eddc085026b828c75f7cde286
+Description:  liburing provides helpers to setup and teardown io_uring instances,
+ and also a simplified interface for applications that don't need
+ (or want) to deal with the full kernel side implementation.
+ For more info on io_uring, please see: https://kernel.dk/io_uring.pdf
+
+Package: runc
+Version: 1.1.14-1
+Depends: libc, libseccomp
+License: Apache-2.0
+Section: utils
+CPE-ID: cpe:/a:linuxfoundation:runc
+Architecture: x86_64
+Installed-Size: 3896607
+Filename: runc_1.1.14-1_x86_64.ipk
+Size: 3872856
+SHA256sum: e4a6fb25cb4fe37e663d1bfd2dd4c938691df1150025e766f143ee9b9a6ed923
+Description:  runc is a CLI tool for spawning and running containers according to the OCI specification.
+
+Package: samba4-admin
+Version: 4.21.1-1
+Depends: libc, samba4-libs
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: x86_64
+Installed-Size: 974426
+Filename: samba4-admin_4.21.1-1_x86_64.ipk
+Size: 969353
+SHA256sum: 6d6f87a0464e39e0063a57420f66c36025d4ff9cf6c8c5584c6143d9f46c1d4d
+Description:  installs: net smbcontrol profiles rpcclient dbwrap_tool eventlogadm
+ ldbadd ldbdel ldbedit ldbmodify ldbrename ldbsearch
+ tdbbackup tdbdump tdbrestore tdbtool
+ 
+ Administration tools collection
+
+Package: samba4-client
+Version: 4.21.1-1
+Depends: libc, samba4-libs
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: x86_64
+Installed-Size: 98634
+Filename: samba4-client_4.21.1-1_x86_64.ipk
+Size: 99466
+SHA256sum: fe298dba8379b4b46889c5ab96b43ca90578abc3f0f9edcaa07900d10414ea1b
+Description:  installs: cifsdd smbclient smbget
+ 
+ The smbclient program implements a simple ftp-like client for accessing SMB shares
+
+Package: samba4-libs
+Version: 4.21.1-1
+Depends: libc, libtirpc, libreadline8, libpopt0, libcap, zlib, libgnutls, libtasn1, libuuid1, libopenssl3, libpthread, liburing, libpam, attr, libavahi-client
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: x86_64
+Installed-Size: 9551667
+Filename: samba4-libs_4.21.1-1_x86_64.ipk
+Size: 9500729
+SHA256sum: d9f7c9eb9f50b900cba03ee489b3cec7b9233d128fc86d408c5567784ac18171
+Description:  Samba 4.21.1 libs
+
+Package: samba4-server
+Version: 4.21.1-1
+Depends: libc, samba4-libs
+Conflicts: samba36-server
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: x86_64
+Installed-Size: 246168
+Filename: samba4-server_4.21.1-1_x86_64.ipk
+Size: 247126
+SHA256sum: bf385f438b4b51910505fa922ecad01ec8e4c0ff953f56d14c89a5626079cf40
+Description:  installs: smbd (nmbd) smbpasswd pdbedit testparm (nmblookup) (smbcacls sharesec)
+ (samba samba-tool ntlm_auth samba-gpupdate samba_dnsupdate samba_kcc samba_spnupdate samba_upgradedns samba_downgrade_db)
+ 
+ This provides the basic fileserver service and is the minimum needed to serve file shares.
+ HINT: https://fitzcarraldoblog.wordpress.com/2016/10/17/a-correct-method-of-configuring-samba-for-browsing-smb-shares-in-a-home-network/
+
+Package: samba4-utils
+Version: 4.21.1-1
+Depends: libc, samba4-libs
+License: GPL-3.0-only
+Section: net
+CPE-ID: cpe:/a:samba:samba
+Architecture: x86_64
+Installed-Size: 30155
+Filename: samba4-utils_4.21.1-1_x86_64.ipk
+Size: 30926
+SHA256sum: a27b7d1a5854fae5c06fbee4d2f33dd39cb585258a688e7d1f0656c3b81ca299
+Description:  installs: smbstatus smbtree mvxattr smbtar (smbcquotas)
+ 
+ Utilities collection
+
+Package: tini
+Version: 0.19.0-2
+Depends: libc
+License: MIT
+Section: utils
+CPE-ID: cpe:/a:tini_project:tini
+Architecture: x86_64
+Installed-Size: 31121
+Filename: tini_0.19.0-2_x86_64.ipk
+Size: 31774
+SHA256sum: 2e7b57404bf2297d505e88ca1e913cc6999518f7fd858a7b5adb09e5c26a10f5
+Description:  A tiny but valid init process for containers.
 
