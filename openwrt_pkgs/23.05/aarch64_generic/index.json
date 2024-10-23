@@ -1,1 +1,1 @@
-{"architecture": "aarch64_generic", "packages":{"luci-app-alist": "1.1.1", "luci-i18n-alist-zh-cn": "git-24.283.78010-d89d4d3"}}
+{"architecture": "aarch64_generic", "packages":{"containerd": "1.7.22-1", "liburing": "2.7-1", "runc": "1.1.14-1"}}

@@ -1,29 +1,56 @@
-Package: luci-app-alist
-Version: 1.1.1
-Depends: libc, alist
-Source: /feed/luci-app-alist
-SourceName: luci-app-alist
-Section: luci
-SourceDateEpoch: 1728510010
-Maintainer: OpenWrt LuCI community
-Architecture: all
-Installed-Size: 4146
-Filename: luci-app-alist_1.1.1_all.ipk
-Size: 4941
-SHA256sum: 4662f8a402ebbb917a06e07e8019e76ea8155b57e227cfe571eb92a3ef6439f7
-Description:  LuCI support for alist
+Package: containerd
+Version: 1.7.22-1
+Depends: libc, btrfs-progs, runc
+Source: /feed/packages/containerd
+SourceName: containerd
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: utils
+SourceDateEpoch: 1729631031
+CPE-ID: cpe:/a:linuxfoundation:containerd
+Maintainer: Gerard Ryan <G.M0N3Y.2503@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 36241696
+Filename: containerd_1.7.22-1_aarch64_generic.ipk
+Size: 35958307
+SHA256sum: 8c3572614df8474877452755d3f7872712b64264520544f35b8ec460c025f1ef
+Description:  An industry-standard container runtime with an emphasis on simplicity, robustness and portability
 
-Package: luci-i18n-alist-zh-cn
-Version: git-24.283.78010-d89d4d3
-Depends: libc, luci-app-alist
-Source: /feed/luci-app-alist
-SourceName: luci-i18n-alist-zh-cn
-Section: luci
-SourceDateEpoch: 1728510010
-Architecture: all
-Installed-Size: 1938
-Filename: luci-i18n-alist-zh-cn_git-24.283.78010-d89d4d3_all.ipk
-Size: 2697
-SHA256sum: b185d0c1b0c20f2448f2699c53736c84c71d86e2a090b67badd328a584966fd4
-Description:  Translation for luci-app-alist - 简体中文 (Chinese Simplified)
+Package: liburing
+Version: 2.7-1
+Depends: libc
+Source: /feed/packages/liburing
+SourceName: liburing
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1729631031
+Maintainer: Christian Lachner <gladiac@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 8201
+Filename: liburing_2.7-1_aarch64_generic.ipk
+Size: 9006
+SHA256sum: f6abb6ef952815bc5b1ced97eecf9464bd33971d4648ffd861708775be156a65
+Description:  liburing provides helpers to setup and teardown io_uring instances,
+ and also a simplified interface for applications that don't need
+ (or want) to deal with the full kernel side implementation.
+ For more info on io_uring, please see: https://kernel.dk/io_uring.pdf
+
+Package: runc
+Version: 1.1.14-1
+Depends: libc, libseccomp
+Source: /feed/packages/runc
+SourceName: runc
+License: Apache-2.0
+LicenseFiles: LICENSE
+Section: utils
+SourceDateEpoch: 1729631031
+CPE-ID: cpe:/a:linuxfoundation:runc
+Maintainer: Gerard Ryan <G.M0N3Y.2503@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 3601234
+Filename: runc_1.1.14-1_aarch64_generic.ipk
+Size: 3574707
+SHA256sum: 878f0ed7cb8cc21ab9671d9d6773b8bd3c9cad1be324ef44a2b283ec97260996
+Description:  runc is a CLI tool for spawning and running containers according to the OCI specification.
 
