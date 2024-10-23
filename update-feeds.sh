@@ -1,12 +1,10 @@
 #!/bin/bash
 
-mkdir -p packages
-cd packages
-
 # backup feeds
 shopt -s extglob
-mkdir -p /tmp/bak/
-mv */ /tmp/bak/
+mv packages /tmp
+mkdir -p packages
+cd packages
 
 # download feeds
 git clone https://github.com/openwrt/luci openwrt/luci -b openwrt-23.05 --depth 1
@@ -43,8 +41,9 @@ rm -rf immortalwrt/luci-app-homeproxy/{LICENSE,README}
 rm -rf openwrt-ddns-go/luci-app-ddns-go/README.md
 rm -rf openwrt_pkgs/{fw_download_tool,lshw,luci-app-ota,rtl_fm_streamer}
 rm -rf openwrt_helloworld/{luci-app-homeproxy,luci-app-mihomo,mihomo,v2ray-geodata}
+rm -rf openwrt-daed/PIC
 rm -rf liburing/.git
-rm -rf samba4/.git
+rm -rf samba4/{.git,README.md}
 rm -rf containerd/.git
 rm -rf docker/.git
 rm -rf dockerd/.git
@@ -159,6 +158,7 @@ sed -i 's/procd_set_param stderr 1/procd_set_param stderr 0/g' feeds/packages/ut
 rm -rf luci-app-upnp/po/!(templates|zh_Hans)
 
 # add samba4
+sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' samba4/Makefile
 sed -i '/workgroup/a \\n\t## enable multi-channel' samba4/files/smb.conf.template
 sed -i '/enable multi-channel/a \\tserver multi channel support = yes' samba4/files/smb.conf.template
 sed -i 's/#aio read size = 0/aio read size = 0/g' samba4/files/smb.conf.template
@@ -169,12 +169,14 @@ sed -i 's/#create mask/create mask/g' samba4/files/smb.conf.template
 sed -i 's/#directory mask/directory mask/g' samba4/files/smb.conf.template
 sed -i 's/0666/0644/g;s/0777/0755/g' samba4/files/samba.config
 sed -i 's/0666/0644/g;s/0777/0755/g' samba4/files/smb.conf.template
-sed -i 's/0666/0644/g;s/0744/0755/g;s/0777/0755/g' luci-app-samba4/htdocs/luci-static/resources/view/samba4.js
+#sed -i 's/0666/0644/g;s/0744/0755/g;s/0777/0755/g' luci-app-samba4/htdocs/luci-static/resources/view/samba4.js
 
 # unblockneteasemusic
 sed -i 's/解除网易云音乐播放限制/网易云音乐解锁/g' luci-app-unblockneteasemusic/root/usr/share/luci/menu.d/luci-app-unblockneteasemusic.json
 
 # docker
+mv immortalwrt/packages/utils/docker-compose docker-compose
+mv immortalwrt/packages/utils/tini tini
 patch -p2 -f -s < patch-dockerd-fix-bridge-network.patch
 patch -p2 -f -s < patch-dockerd-add-buildkit-experimental-support.patch
 patch -p2 -f -s < patch-dockerd-disable-ip6tables-for-bridge-network-by-defa.patch
@@ -182,7 +184,6 @@ sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' containerd/Makefile
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' docker/Makefile
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' dockerd/Makefile
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' runc/Makefile
-mv immortalwrt/packages/utils/docker-compose docker-compose
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' docker-compose/Makefile
 
 # nlbwmon
